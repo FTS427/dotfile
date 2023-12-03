@@ -1,3 +1,6 @@
+# Path
+PATH="$PATH:/home/fts427/.local/bin"
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=999999999
@@ -8,8 +11,11 @@ setopt beep
 bindkey -e
 zstyle :compinstall filename '/home/fts427/.zshrc'
 # Plug
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search
+source /home/fts427/app/zshp/fzf-tab/fzf-tab.plugin.zsh
+source /home/fts427/app/zshp/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 #source /usr/share/zsh/plugins/incr/incr.plugin.zsh
 
 # Alias
@@ -19,10 +25,11 @@ alias la='lsd -a'
 alias ll='lsd -l'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
-alias upgrub="sudo update-grub"
-alias fastgh="sudo fastgithub start"
+alias upgrub='sudo update-grub'
+alias fastgh='sudo fastgithub start'
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown now'
+alias showip='ip addr|grep -i "enp0s25"'
 alias qq='linuxqq'
 
 alias unxz='tar -xf'
@@ -44,6 +51,21 @@ bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
+
+# Rust
+fpath+=~/.zfunc
+
+# PiPy
+__pip() {
+compadd $( COMP_WORDS="$words[*]" \
+COMP_CWORD=$((CURRENT-1)) \
+PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null )
+}
+if [[ $zsh_eval_context[-1] == loadautofunc ]]; then
+__pip "$@"
+#else
+#compdef __pip -P 'pip[0-9.]#'
+fi
 
 # Git
 autoload -Uz compinit && compinit
