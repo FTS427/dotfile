@@ -19,7 +19,6 @@ source /home/fts427/app/zshp/fast-syntax-highlighting/fast-syntax-highlighting.p
 #source /usr/share/zsh/plugins/incr/incr.plugin.zsh
 
 # Alias
-alias system='neofetch|lolcat'
 alias ls='lsd'
 alias la='lsd -a'
 alias ll='lsd -l'
@@ -78,10 +77,4 @@ zstyle ':vcs_info:git:*' formats '%b'
 # Prompt
 PROMPT='%B%F{cyan}[%n]%f@%F{blue}[%m]%F{green}[%1~]%f%b> '
 RPROMPT='%B%F{yellow}['\$vcs_info_msg_0_']%f%F{white}[%*][%D]%f%b'
-
-# Color
-if [ -n $DISPLAY ];
-    then export TERM="xterm-256color"
-    else export TERM="linux"
-fi
 
