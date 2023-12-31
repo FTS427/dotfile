@@ -10,13 +10,13 @@ SAVEHIST=999999999
 setopt beep
 bindkey -e
 zstyle :compinstall filename '/home/fts427/.zshrc'
+
 # Plug
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search
 source /home/fts427/app/zshp/fzf-tab/fzf-tab.plugin.zsh
 source /home/fts427/app/zshp/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-#source /usr/share/zsh/plugins/incr/incr.plugin.zsh
 
 # Alias
 alias ls='lsd'

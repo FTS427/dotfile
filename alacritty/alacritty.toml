@@ -1,3 +1,5 @@
+live_config_reload = true
+
 [colors.bright]
 black = "#4c566a"
 blue = "#81a1c1"
@@ -49,6 +51,13 @@ text = "CellForeground"
 cursor = "#d8dee9"
 text = "#2e3440"
 
+[cursor]
+blink_interval = 550
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
 [font]
 size = 13
 
@@ -67,3 +76,17 @@ style = "Italic"
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+opacity = 0.9
+
+[window.dimensions]
+columns = 100
+lines = 24
+
+[window.padding]
+x = 2
+y = 2

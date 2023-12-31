@@ -1,0 +1,37 @@
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <ramp-load> <label>
+
+ramp-load-0 = 
+ramp-load-0-foreground = ${colors.success}
+
+ramp-load-2 = 
+ramp-load-1-foreground = ${colors.warning}
+
+[module/memory]
+type = internal/memory
+interval = 3
+
+format = <ramp-used> <label>
+
+label = %gb_used%/%gb_total%
+
+ramp-used-0 = 
+ramp-used-0-foreground = ${colors.success}
+
+ramp-used-2 =  
+ramp-used-2-foreground = ${colors.warning}
+
+[module/network-detail]
+type = internal/network
+interface = ${config.interface}
+
+interval = 3
+
+format-connected = <label-connected>
+
+label-connected =  %downspeed:9%   %upspeed:9%
+label-connected-foreground = ${colors.success}
+

@@ -1,11 +1,22 @@
-env:
-  TERM: alacritty
-
 cursor: 
-  style: Block
-  blinking: true
+  style: 
+    shape: Block
+    blinking: Always
+  blink_interval: 550
 
-background_opacity: 0.7
+live_config_reload: true
+
+window:
+  opacity: 0.9
+  dimensions:
+    columns: 100
+    lines: 24
+  padding: 
+    x: 2
+    y: 2
+
+mouse:
+  hide_when_typing: true
 
 font:
   size: 13
