@@ -2,7 +2,7 @@
 dpi = 98
 
 width = 100%
-height = 2%
+height = 3%
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -18,29 +18,6 @@ fixed-center = true
 # If problem still persist, look at Polybar's wiki for more options.
 override-redirect = false
 wm-restack = i3
-
-# -------------------------------------------
-# Modules
-# -------------------------------------------
-
-# pulseaudio: Display current volume for pulseaudio
-# backlight: Display screen brightness
-# date: Display date
-# notify: Notify icon, can customize its binding
-# network-short: Network connect icon, can customize its binding
-# keyboard: CapsLock indicator
-# i3: i3 workspace icons
-# workspace-name: i3 current workspace name, need to be in the format like "1:Home"
-# title: title of the active window
-# network-detail: Download and upload speed 
-# powermenu: menu to control system power
-# info-hackspeed: Numper of characters clicked per minute
-# memory: Display memory usage
-# cpu: Display cpu usage
-# show-desktop: Display desktop (i3 only)
-# clipmenu-widget: showing clipmenu service
-# logseq-sync: Syncing logseq folder by git
-# mullvad-status: showing mullvad status
 
 # Top modules
 top-left = i3
