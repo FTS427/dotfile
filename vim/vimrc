@@ -35,13 +35,15 @@ func! CompileRunGcc()
         :!./%
     endif
 endfunc
-"C,C++的调试
+
+"C,C++ debug
 map <F8> :call Rungdb()<CR>
 func! Rungdb()
     exec "w"
     exec "!g++ % -g -o %<"
     exec "!gdb ./%<"
 endfunc
+
 set completeopt=preview,menu
 set clipboard+=unnamed
 set whichwrap+=<,>,h,l
@@ -57,6 +59,9 @@ Plug 'yggdroot/indentline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'valloric/youcompleteme'
 Plug 'nordtheme/vim'
+Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'rust-lang/rust.vim'
+"Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 
 call plug#end()
 
@@ -66,6 +71,10 @@ let g:airline#extensions#tabline#formatter = 'jsformatter'  " 设置默认tab栏
 
 " airline-theme
 let g:airline_theme='nord'
+
+" CarbonNowSh
+map <F10> :CarbonNowSh<CR>
+let g:carbon_now_sh_base_url = 'http://localhost:3000'
 
 " Color
 colorscheme nord
@@ -83,8 +92,8 @@ let g:ycm_complete_in_comments = 1                          " 在注释输入中
 let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释和字符串中的文字也会被收入补全
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_show_diagnostics_ui = 0                           " 禁用语法检查
+let g:ycm_show_diagnostics_ui = 1                           " 禁用语法检查
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>" |            " 回车即选中当前项
 nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|     " 跳转到定义处
-"let g:ycm_min_num_of_chars_for_completion=2                 " 从第2个键入字符就开始罗列匹配项
+let g:ycm_min_num_of_chars_for_completion=2                 " 从第2个键入字符就开始罗列匹配项
 
