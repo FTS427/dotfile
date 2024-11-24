@@ -23,10 +23,11 @@ shutdown=" Shutdown"
 reboot=" Reboot"
 suspend=" Sleep"
 logout=" Logout"
+lockscreen="🔒 Lock"
 
 # Variable passed to rofi
 open_menu () {
-	options="$suspend\n$logout\n$reboot\n$shutdown"
+	options="$lockscreen\n$suspend\n$logout\n$reboot\n$shutdown"
 
 	chosen="$(echo -e "$options" | $wofi_command --prompt "$uptime")"
 	case $chosen in
@@ -61,6 +62,13 @@ open_menu () {
 				exit
 			fi
 			;;
+        $lockscreen)
+            if [[ "$?" == 0 ]]; then
+                hyprlock
+            else
+                exit
+            fi
+            ;;
 	esac
 }
 

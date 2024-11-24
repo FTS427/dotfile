@@ -21,8 +21,8 @@ filetype plugin indent on  " 开启文件类型插件检测
 syntax on 			" 开启语法高亮
 
 " C, C++ build
-map <F5> :call ClangCompileC()<CR>
-func! ClangCompileC()
+map <F5> :call ClangCompile()<CR>
+func! ClangCompile()
     exec "w"
     if &filetype == 'c'
         exec "!clang % -o %<"
@@ -32,6 +32,8 @@ func! ClangCompileC()
         exec "! ./%<"
     elseif &filetype == 'sh'
         :!./%
+    elseif &filetype == 'rs'
+        exec "!cargo run<"
     endif
 endfunc
 
@@ -46,7 +48,6 @@ endfunc
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'ryanoasis/vim-devicons'
 Plug 'valloric/youcompleteme'
 Plug 'nordtheme/vim'
 Plug 'rust-lang/rust.vim'
