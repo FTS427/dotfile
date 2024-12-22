@@ -7,6 +7,6 @@ case "$domin" in
     ;;
     *)
     url=$2;
-    /usr/bin/axel -n 5 -k -c -p -a -o $1 $url;
+    /usr/bin/curl -gqb "" -fLC - --retry 3 --retry-delay 3 -o $1 $url;
     ;;
 esac
