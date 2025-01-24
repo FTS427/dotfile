@@ -28,7 +28,7 @@ alias zshrc='vim ~/.zshrc'
 alias reboot='doas reboot'
 alias shutdown='doas shutdown now'
 alias showip='ip addr|grep -i "enp0s25"'
-alias unxz='tar -xf'
+alias unxz='xz -d'
 alias untgz='tar -zxvf'
 alias dfg='df --block-size=GB'
 
@@ -83,6 +83,9 @@ export CCACHE_UMASK=002
 export CCACHE_DIR=/var/tmp/ccache
 ccache -M 50G
 ccache -o compression=true
+
+# Nextcloud
+export NEXTCLOUD_PHP_CONFIG=/etc/webapps/nextcloud/php.ini
 
 ### key-bindings.zsh ###
 #     ____      ____

@@ -1,17 +1,20 @@
+##### Main #####
 ncmpcpp_directory = ~/Music/.ncmpcpp
 lyrics_directory = ~/Music/.lyrics
 mpd_host = localhost
-mpd_port = 5690
+mpd_port = 9070
 mpd_connection_timeout = 5
 mpd_music_dir = ~/Music
 
 ##### music visualizer #####
-
 visualizer_output_name =                "my_fifo"
 visualizer_in_stereo =                  "no"
 visualizer_data_source =                "/tmp/mpd.fifo"
 visualizer_type =                       "spectrum"
 visualizer_look =                       "▋▋"
+
+##### Notice #####
+#execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 
 ##### song format #####
 ##

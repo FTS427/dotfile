@@ -2,7 +2,9 @@
 
 ## Env
 
-OS: archlinux
+Suitable for archlinux
+
+## Config
 
 DE: Hyprland, i3wm(won't update)
 
@@ -10,7 +12,17 @@ Terminal: alacritty
 
 Bar: waybar, polybar(won't update)
 
-And config files for: aria2, dunst(won't update), fastfetch, neofetch(won't update), htop, mako, mpd, mpv, ncmpcpp, vim, zsh
+Show system info: fastfetch, htop, neofetch(won't update)
+
+Editor: vim(plugin with [vim-plug](https://github.com/junegunn/vim-plug))
+
+Shell: zsh
+
+Media: mpv, mpd, rmpc, ncmpcpp(won't update)
+
+Download manager: aria2
+
+And config files for: mako, joshuto, dunst(won't update)
 
 Theme: Nord, Material
 
