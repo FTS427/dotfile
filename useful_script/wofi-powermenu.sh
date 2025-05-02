@@ -19,11 +19,11 @@ wofi_command="wofi --show dmenu \
 uptime=$(uptime -p | sed -e 's/up //g')
 
 ## Entries
-shutdown=" Shutdown"
-reboot=" Reboot"
-suspend=" Sleep"
-logout=" Logout"
-lockscreen="🔒 Lock"
+shutdown="󰐥 shutdown"
+reboot="󰑓 reboot"
+suspend="󰤄 sleep"
+logout="󰍃 logout"
+lockscreen="󰌾 lockscreen"
 
 # Variable passed to rofi
 open_menu () {

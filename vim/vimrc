@@ -1,3 +1,5 @@
+" Vim Config
+
 " Basic settings
 set number  			" 显示行号
 set incsearch           " 实时开启搜索高亮
@@ -20,20 +22,22 @@ filetype on			" 开启文件类型检测
 filetype plugin indent on  " 开启文件类型插件检测
 syntax on 			" 开启语法高亮
 
-" C, C++ build
-map <F5> :call ClangCompile()<CR>
-func! ClangCompile()
+" build
+map <F5> :call Compile()<CR>
+func! Compile()
     exec "w"
-    if &filetype == 'c'
+    if      &filetype == 'c'
         exec "!clang % -o %<"
         exec "! ./%<"
-    elseif &filetype == 'cpp'
+    elseif  &filetype == 'cpp'
         exec "!clang++ % -o %<"
         exec "! ./%<"
-    elseif &filetype == 'sh'
+    elseif  &filetype == 'sh'
         :!./%
-    elseif &filetype == 'rs'
+    elseif  &filetype == 'rs'
         exec "!cargo run<"
+    elseif  &filetype == 'py'
+        exec "!python %"
     endif
 endfunc
 
