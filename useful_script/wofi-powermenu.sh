@@ -49,8 +49,8 @@ open_menu () {
 			if [[ "$?" == 0 ]]; then
 				mpc -q pause
 				pulsemixer --mute
-				#~/.config/hypr/scripts/lockscreen
 				systemctl suspend
+                hyprlock
 			else
 				exit
 			fi

@@ -2,7 +2,8 @@
 
 # Path
 PATH="$PATH:/home/fts427/.local/bin"
-export PATH="$PATH:/home/fts427/.dotnet/tools"
+PATH="$PATH:/home/fts427/.dotnet/tools"
+PATH="$PATH:/opt/android-sdk/platform-tools"
 
 # History
 HISTFILE=~/.histfile
@@ -27,8 +28,8 @@ alias la='lsd -a'
 alias ll='lsd -l'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
-alias reboot='doas reboot'
-alias shutdown='doas shutdown now'
+alias reboot='doas systemctl reboot'
+alias shutdown='doas systemctl poweroff'
 alias untgz='tar -zxvf'
 alias dfg='df --block-size=GB'
 alias bat='bat --theme Nord'
@@ -51,43 +52,36 @@ bindkey "\e[F" end-of-line
 # completion in the middle of a line
 bindkey '^i' expand-or-complete-prefix
 
-# Rust
-fpath+=~/.zfunc
-
-# PiPy
-__pip() {
-compadd $( COMP_WORDS="$words[*]" \
-COMP_CWORD=$((CURRENT-1)) \
-PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null )
-}
-if [[ $zsh_eval_context[-1] == loadautofunc ]]; then
-__pip "$@"
-#else
-#compdef __pip -P 'pip[0-9.]#'
-fi
-
-# Git
+# Git prompt configuration
 autoload -Uz compinit && compinit
 autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '%b'
+autoload -Uz colors && colors
 
-# Prompt
-PROMPT='%B%F{cyan}[%n]%f@%F{blue}[%m]%F{green}[%1~]%f%b> '
-RPROMPT='%B%F{yellow}['\$vcs_info_msg_0_']%f%F{white}[%*][%D]%f%b'
+# Configure vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr ' !'
+zstyle ':vcs_info:*' stagedstr ' +'
+zstyle ':vcs_info:git:*' formats '%F{yellow}[%b%u%c]%f'
+zstyle ':vcs_info:git:*' actionformats '%F{yellow}[%b|%a%u%c]%f'
+
+# Initialize prompt system
+setopt prompt_subst
+precmd() { 
+    vcs_info
+}
+
+# Main prompt configuration
+PROMPT=$'%B%F{cyan}[%n]%f@%F{blue}[%m]%F{green}[%1~]%f%b%F{white}$%f '
+RPROMPT='${vcs_info_msg_0_}%F{white}[%*][%D]%f'
 
 # C Cache
 export USE_CCACHE=1
 export CCACHE_SLOPPINESS=file_macro,include_file_mtime,time_macros
 export CCACHE_UMASK=002
 export CCACHE_DIR=/var/tmp/ccache
-ccache -M 50G
-ccache -o compression=true
-
-# Nextcloud
-export NEXTCLOUD_PHP_CONFIG=/etc/php/php.ini
+#ccache -M 50G
+#ccache -o compression=true
 
 #compdef gh
 compdef _gh gh

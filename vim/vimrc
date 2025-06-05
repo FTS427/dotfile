@@ -1,63 +1,44 @@
 " Vim Config
 
 " Basic settings
-set number  			" 显示行号
-set incsearch           " 实时开启搜索高亮
-set hlsearch			" 搜索结果高亮
-set autoindent			" 自动缩进
-set smartindent			" 智能缩进
-set tabstop=4			" 设置tab制表符号所占宽度为4
-set softtabstop=4		" 设置按tab时缩进宽度为4
-set shiftwidth=4		" 设置自动缩进宽度为4
-set expandtab			" 缩进时将tab制表服转为空格
-set smartcase           " 开启智能大小写查找
-set encoding=utf-8      " 使用UTF-8
-set showcmd             " 显示命令输出
-set clipboard=unnamedplus " 开启系统剪切板
-set cursorline          " 高亮当前行
-set ignorecase          " 设置忽略大小写
-set smartcase           " 设置智能大小写
-set ruler               " 设置显示当前位置
-filetype on			" 开启文件类型检测
-filetype plugin indent on  " 开启文件类型插件检测
-syntax on 			" 开启语法高亮
+set number
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
+set autoindent
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set showcmd
+set clipboard=unnamedplus
+set cursorline
+set ruler
 
-" build
-map <F5> :call Compile()<CR>
-func! Compile()
-    exec "w"
-    if      &filetype == 'c'
-        exec "!clang % -o %<"
-        exec "! ./%<"
-    elseif  &filetype == 'cpp'
-        exec "!clang++ % -o %<"
-        exec "! ./%<"
-    elseif  &filetype == 'sh'
-        :!./%
-    elseif  &filetype == 'rs'
-        exec "!cargo run<"
-    elseif  &filetype == 'py'
-        exec "!python %"
-    endif
-endfunc
+filetype on
+filetype plugin indent on
+syntax on
 
-" C,C++ debug
-map <F8> :call Rungdb()<CR>
-func! Rungdb()
-    exec "w"
-    exec "!g++ % -g -o %<"
-    exec "!gdb ./%<"
-endfunc
+" Key binds
+let mapleader="<Alt>"
+"nnoremap <Leader>
+nnoremap <A-Left>  :bprevious<CR>
+nnoremap <A-Right> :bnext<CR>
+nnoremap <A-Up>    :bfirst<CR>
+nnoremap <A-Down>  :blast<CR>
 
-" Plugins
+" Plugs
 call plug#begin('~/.vim/plugged')
 
-Plug 'valloric/youcompleteme'
 Plug 'nordtheme/vim'
 Plug 'rust-lang/rust.vim'
 Plug 'frazrepo/vim-rainbow'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dense-analysis/ale'
+Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -65,45 +46,49 @@ call plug#end()
 colorscheme nord
 let g:rainbow_active=1
 
-" cpp highlight
-let g:cpp_class_scope_highlight=1
-let g:cpp_variable_highlight=1
-let g:cpp_class_decl_highlight=1
-let g:cpp_posix_standard = 1
-let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_concepts_highlight = 1
-
 " lightline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \     'active': {
-      \         'left': [
-      \             [ 'mode', 'paste' ],
-      \             [ 'gitbranch' ,'readonly', 'filename', 'modified' ]
-      \         ],
-      \         'right': [
-      \             [ 'lineinfo' ], [ 'percent' ],
-      \             [ 'fileformat', 'fileencoding', 'filetype' ]
-      \         ]
-      \     }
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \     'left': [
+      \         [ 'mode', 'paste' ],
+      \         [ 'gitbranch' ,'readonly', 'filename', 'modified' ]
+      \     ],
+      \     'right': [
+      \         [ 'lineinfo' ], [ 'percent' ],
+      \         [ 'fileformat', 'fileencoding', 'filetype' ]
+      \     ]
+      \ }
       \ }
 
-" YouCompleteMe
-set runtimepath+=~/.vim/plugged/youcompleteme
-let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM 基于标签引擎
-let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
-let g:syntastic_ignore_files=[".*\.py$"]
-let g:ycm_seed_identifiers_with_syntax = 1                  " 语法关键字补全
-let g:ycm_complete_in_comments = 1
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']  " 映射按键, 没有这个会拦截掉tab, 导致其他插件的tab不能用.
-let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-let g:ycm_complete_in_comments = 1                          " 在注释输入中也能补全
-let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释和字符串中的文字也会被收入补全
-let g:ycm_show_diagnostics_ui = 1                           " 禁用语法检查
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>" |            " 回车即选中当前项
-nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|     " 跳转到定义处
-let g:ycm_min_num_of_chars_for_completion=2                 " 从第2个键入字符就开始罗列匹配项
+" ALE
+let g:ale_enabled = 1
+let g:ale_completion_enabled = 1
+let g:ale_set_balloons = 1
+let g:ale_completion_autoimport = 1
+let g:ale_linters = {
+      \ 'rust': ['analyzer'],
+      \ 'c': ['clangd'],
+      \ 'cpp': ['clangd']
+      \ }
+let g:ale_c_clangd_executable = '/usr/bin/clangd'
+let g:ale_cpp_clangd_executable = '/usr/bin/clangd'
+let g:ale_rust_analyzer_executable = '/usr/bin/rust-analyzer'
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '>'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+set omnifunc=ale#completion#OmniFunc
+autocmd FileType c,cpp,rust setlocal completeopt=menu,menuone,noselect
+autocmd FileType c,cpp,rust inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
+augroup fmt
+    autocmd!
+    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! execute ':!clang-format -i %'
+    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! edit!
+augroup END
+
+set wildmenu
+set showmatch
+set background=dark
