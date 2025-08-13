@@ -22,12 +22,12 @@ filetype plugin indent on
 syntax on
 
 " Key binds
-let mapleader="<Alt>"
+let mapleader="<CR>"
 "nnoremap <Leader>
-nnoremap <A-Left>  :bprevious<CR>
-nnoremap <A-Right> :bnext<CR>
-nnoremap <A-Up>    :bfirst<CR>
-nnoremap <A-Down>  :blast<CR>
+nnoremap <C-Left>  :bprevious<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Up>    :bfirst<CR>
+nnoremap <C-Down>  :blast<CR>
 
 " Plugs
 call plug#begin('~/.vim/plugged')
@@ -39,6 +39,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
@@ -92,3 +93,4 @@ augroup END
 set wildmenu
 set showmatch
 set background=dark
+

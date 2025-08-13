@@ -2,57 +2,77 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    address: "127.0.0.1:6600",
+    address: "/run/user/1000/mpd/socket",
     password: None,
     theme: "nord",
-    cache_dir: "~/.cache/rmpc",
-    lyrics_dir: "~/Music/.lyrics",
+    
+    cache_dir: "/home/fts427/.cache/rmpc",
+    lyrics_dir: "/home/fts427/Music/.lyrics",
     on_song_change: ["/home/fts427/.config/rmpc/notify"],
+    on_resize: [],
+
+    mpd_read_timeout_ms: 5_000,
+    mpd_write_timeout_ms: 5_000,
+    
     volume_step: 5,
+    max_fps: 60,
     scrolloff: 0,
     wrap_navigation: false,
-    enable_mouse: true,
-    status_update_interval_ms: 1000,
+    enable_mouse: false,
+    enable_config_hot_reload: true,
+    status_update_interval_ms: 1_000,
     select_current_song_on_change: false,
+    
     album_art: (
-        method: Chafa,  // 关键：使用 chafa 绘制专辑封面
-        max_size_px: (width: 60, height: 30), // 适合终端显示的尺寸
+        method: Sixel,
+        max_size_px: (width: 512, height: 512),
         disabled_protocols: ["http://", "https://"],
+        vertical_align: Center,
+        horizontal_align: Center,
     ),
+    
     keybinds: (
         global: {
             ":":       CommandMode,
             "-":       VolumeDown,
-            "s":       Stop,
             "=":       VolumeUp,
+            
+            "s": Stop,
             "<Tab>":   NextTab,
-            "<S-Tab>": PreviousTab,
+            
             "1":       SwitchToTab("Queue"),
-            "2":       SwitchToTab("Albums"),
+            "2":       SwitchToTab("Directories"),
             "3":       SwitchToTab("Artists"),
-            "4":       SwitchToTab("Directories"),
-            "5":       SwitchToTab("Search"),
-            "6":       SwitchToTab("Lyrics"),
+            "4":       SwitchToTab("Album Artists"),
+            "5":       SwitchToTab("Albums"),
+            "6":       SwitchToTab("Playlists"),
+            "7":       SwitchToTab("Search"),
+            "8":       SwitchToTab("Browser"),
+            "9":       SwitchToTab("Lyrics"),
+            
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
             "<":       PreviousTrack,
+            
             "f":       SeekForward,
             "z":       ToggleRepeat,
             "x":       ToggleRandom,
             "c":       ToggleConsume,
             "v":       ToggleSingle,
             "b":       SeekBack,
-            "h":       ShowHelp,
+            "~":       ShowHelp,
             "I":       ShowCurrentSongInfo,
             "O":       ShowOutputs,
             "P":       ShowDecoders,
         },
+        
         navigation: {
             "<Up>":      Up,
             "<Down>":    Down,
             "<Left>":    Left,
             "<Right>":   Right,
+            
             "<C-k>":     PaneUp,
             "<C-j>":     PaneDown,
             "<C-h>":     PaneLeft,
@@ -65,7 +85,6 @@
             "n":         NextResult,
             "g":         Top,
             "<Space>":   Select,
-            "<C-Space>": InvertSelection,
             "G":         Bottom,
             "<CR>":      Confirm,
             "i":         FocusInput,
@@ -77,9 +96,10 @@
             "K":         MoveUp,
             "D":         Delete,
         },
+        
         queue: {
             "D":       DeleteAll,
-            "<CR>":    Play,
+            "<Enter>":    Play,
             "<C-s>":   Save,
             "a":       AddToPlaylist,
             "d":       Delete,
@@ -87,58 +107,162 @@
             "C":       JumpToCurrent,
         },
     ),
+    
     search: (
         case_sensitive: false,
         mode: Contains,
         tags: [
-            (value: "artist",      label: "Artist"),
+            (value: "any",         label: "Any Tag"),
             (value: "album",       label: "Album"),
-            (value: "albumartist", label: "Album Artist"),
-            (value: "title",       label: "Title"),
             (value: "filename",    label: "Filename"),
         ],
     ),
+    
     artists: (
-        album_display_mode: NameOnly,
+        album_display_mode:  NameOnly,
         album_sort_by: Name,
+    ),
+
+    cava: (
+        framerate: 60,
+        autosens: true,
+        sensitivity: 100,
+        lower_cutoff_freq: 50,
+        higher_cutoff_freq: 10000,
+        input: (
+            method: Fifo,
+            source: "/tmp/mpd.fifo",
+            sample_rate: 44100,
+            channels: 2,
+            samble_bits: 16,
+        ),
+        smoothing: (
+            noise_reduction: 77,
+            monstercat: false,
+            waves: false,
+        ),
+        eq: [],
     ),
     tabs: [
         (
             name: "Queue",
-            border_type: None,
             pane: Split(
-                direction: Horizontal,
+                direction: Vertical,
                 panes: [
-                    (size: "40%", pane: Pane(Lyrics)), // 歌词面板
-                    (size: "60%", pane: Pane(Queue))
+                    (
+                        size: "100%",
+                        borders: "NONE",
+                        pane: Split(
+                            borders: "NONE",
+                            direction: Horizontal,
+                            panes: [
+                                (
+                                    size: "70%",
+                                    borders: "ALL",
+                                    pane: Split(
+                                        direction: Vertical,
+                                        panes: [
+                                            (
+                                                size: "70%",
+                                                borders: "NONE",
+                                                pane: Pane(Queue),
+                                            ),
+                                            (
+                                                size: "30%",
+                                                borders: "NONE",
+                                                pane: Pane(Cava),
+                                            ),
+                                        ]
+                                    ),
+                                ),
+                                (
+                                    size: "30%",
+                                    borders: "NONE",
+                                    pane: Split(
+                                        direction: Vertical,
+                                        panes: [
+                                            (
+                                                size: "75%",
+                                                borders: "ALL",
+                                                pane: Pane(AlbumArt),
+                                            ),
+                                            (
+                                                size: "35%",
+                                                borders: "NONE",
+                                                pane: Split(
+                                                    direction: Vertical,
+                                                    panes: [
+                                                        (
+                                                            size: "100%",
+                                                            pane: Pane(Lyrics),
+                                                        ),
+                                                    ]
+                                                ),
+                                            ),
+                                        ]
+                                    ),
+                                ),
+                            ]
+                        ),
+                    ),
                 ],
             ),
         ),
         (
-            name: "Albums",
-            border_type: None,
-            pane: Pane(Albums),
+            name: "Directories",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Directories))],
+            ),
         ),
         (
             name: "Artists",
-            border_type: None,
-            pane: Pane(Artists)
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Artists))],
+            ),
         ),
         (
-            name: "Directories",
-            border_type: None,
-            pane: Pane(Directories),
+            name: "Album Artists",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(AlbumArtists))],
+            ),
+        ),
+        (
+            name: "Albums",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Albums))],
+            ),
+        ),
+        (
+            name: "Playlists",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Playlists))],
+            ),
         ),
         (
             name: "Search",
-            border_type: None,
-            pane: Pane(Search),
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Search))],
+            ),
+        ),
+        (
+            name: "Browser",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Browser(root_tag: "Artist")))],
+            ),
         ),
         (
             name: "Lyrics",
-            border_type: None,
-            pane: Pane(Lyrics),
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "100%", borders: "ALL", pane: Pane(Lyrics))],
+            ),
         ),
     ],
 )
-

@@ -1,35 +1,22 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-# 临时目录
 TMP_DIR="/tmp/rmpc"
 mkdir -p "$TMP_DIR"
 
-# 专辑封面路径
 ALBUM_ART_PATH="$TMP_DIR/notification_cover"
 DEFAULT_ALBUM_ART_PATH="$TMP_DIR/default_album_art.jpg"
 
-# 获取当前歌曲信息
-TITLE="$(rmpc --format '%title%' current | head -n1)"
-ARTIST="$(rmpc --format '%artist%' current | head -n1)"
-ALBUM="$(rmpc --format '%album%' current | head -n1)"
-
-# 如果没有获取到信息，给出友好提示
 [ -z "$TITLE" ] && TITLE="Unknown Title"
 [ -z "$ARTIST" ] && ARTIST="Unknown Artist"
 [ -z "$ALBUM" ] && ALBUM="Unknown Album"
 
-# 获取专辑封面
 if ! rmpc albumart --output "$ALBUM_ART_PATH"; then
     ALBUM_ART_PATH="$DEFAULT_ALBUM_ART_PATH"
 fi
 
-# Material Design 图标（Nerd Font）
-ICON="󰝚" # mdi-music-note
+ICON="󰝚"
 
-# Nord 配色（部分通知服务支持，如 mako，可通过配置实现）
-# 这里只能通过内容和图标体现
-
-# 发送通知
 notify-send -i "$ALBUM_ART_PATH" \
-    "<span font='JetBrainsMono Nerd Font 16'>$ICON  Now Playing</span>" \
+    "$ICON  Now Playing" \
     "<b>$TITLE</b>\n$ARTIST\n$ALBUM"
+

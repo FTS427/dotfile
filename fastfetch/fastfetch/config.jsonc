@@ -4,16 +4,9 @@
     "separator": " "
   },
   "logo": {
-    "type": "chafa",
-    "source": "~/Pictures/cat_background.png",
-    "height": 14,
-    "chafa": {
-      "fgOnly": false,
-      "canvasMode": "INDEXED_256",
-      "colorSpace": "DIN99D",
-      "ditherMode": "DIFFUSION",
-      "symbols": "block",
-    }
+    "type": "sixel",
+    "source": "$HOME/Pictures/cat_background.png",
+    "height": 14
   },
   "modules": [
     {

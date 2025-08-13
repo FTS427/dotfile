@@ -5,14 +5,11 @@
     album_art_position: Right,
     album_art_width_percent: 38,
 
-    default_album_art_path: "~/Music/.album_art",
-
     show_song_table_header: true,
     draw_borders: true,
 
     browser_column_widths: [20, 38, 42],
 
-    # Nord 主色调
     background_color: "#2e3440",
     text_color: "#d8dee9",
     header_background_color: "#3b4252",
@@ -28,12 +25,11 @@
     borders_style: (fg: "#81a1c1"),
     highlight_border_style: (fg: "#88c0d0"),
 
-    # Material Design Nerd Font 图标
     symbols: (
-        song: "󰝚",      # mdi-music-note
-        dir: "󰉋",       # mdi-folder-music
-        marker: "󰃀",    # mdi-bookmark
-        ellipsis: "…"
+        song: "󰝚",
+        dir: "󰉋",
+        marker: "󰃀",
+        ellipsis: "…",
     ),
 
     progress_bar: (
@@ -84,7 +80,7 @@
                 left: [
                     (kind: Text("["), style: (fg: "#ebcb8b", modifiers: "Bold")),
                     (kind: Property(Status(State)), style: (fg: "#ebcb8b", modifiers: "Bold")),
-                    (kind: Text("]"), style: (fg: "#ebcb8b", modifiers: "Bold"))
+                    (kind: Text("]"), style: (fg: "#ebcb8b", modifiers: "Bold")),
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (fg: "#8fbcbb", modifiers: "Bold"),
@@ -92,7 +88,7 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(Volume)), style: (fg: "#81a1c1"))
+                    (kind: Property(Widget(Volume)), style: (fg: "#81a1c1")),
                 ]
             ),
             (
@@ -102,7 +98,7 @@
                     (kind: Property(Status(Duration)), style: (fg: "#d8dee9")),
                     (kind: Text(" ("), style: (fg: "#d8dee9")),
                     (kind: Property(Status(Bitrate)), style: (fg: "#b48ead")),
-                    (kind: Text(" kbps)"), style: (fg: "#d8dee9"))
+                    (kind: Text(" kbps)"), style: (fg: "#d8dee9")),
                 ],
                 center: [
                     (kind: Property(Song(Artist)), style: (fg: "#ebcb8b", modifiers: "Bold"),
@@ -142,4 +138,3 @@
         ),
     ],
 )
-
