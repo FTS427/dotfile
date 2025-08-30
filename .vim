@@ -1,0 +1,1 @@
+/home/fts427/.vim
