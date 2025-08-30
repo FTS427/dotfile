@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "ee.oppo.quest",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "f9247df4-02d5-4b31-acc5-4022652c5953",
+        "mux": 0,
+        "name": "github.com/freefq - 爱沙尼亚  24",
+        "port": 80,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "auto",
+            "headers": "",
+            "host": "ee.oppo.quest",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/aries",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 166,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

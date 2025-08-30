@@ -1,0 +1,46 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "www.zula.ir",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "3e5cda0a-6122-4f54-9e3c-3f49e7a526f9",
+        "mux": 0,
+        "name": "加拿大_多伦多",
+        "port": 80,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "nlch.blueberrynetwork.store",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 3110,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "ul": "",
+    "yc": -1
+}

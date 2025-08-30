@@ -1,0 +1,32 @@
+#!/bin/sh
+# River Config
+
+. $HOME/.scripts/color.sh
+. $HOME/.config/river/autostart
+. $HOME/.config/river/bindings
+
+# Input
+riverctl set-repeat 25 260
+
+riverctl xcursor-theme Adwaita 18
+riverctl hide-cursor when-typing enabled
+riverctl allow-tearing enabled
+riverctl focus-follows-cursor normal
+
+riverctl keyboard-layout us
+
+# Border & Color
+riverctl background-color 0x${nord0}
+riverctl border-color-focused 0x${nord8}
+riverctl border-color-unfocused 0x${nord3}
+riverctl border-color-urgent 0x${nord11}
+riverctl border-width 3
+
+riverctl default-layout rivertile
+rivertile -view-padding 5 -outer-padding 5 &
+
+# Window rules
+riverctl rule-add -app-id "*" ssd
+riverctl rule-add -app-id "QQ" float
+riverctl rule-add -app-id "WonderLab" float
+

@@ -1,1 +1,0 @@
-/home/fts427/.zsh

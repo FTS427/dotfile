@@ -1,0 +1,24 @@
+#!/bin/sh
+# River autostart
+
+killall -q fcitx5 waydroid waybar
+$HOME/.scripts/env.sh
+env LANG=zh_CN.UTF-8
+
+# Wallpaers
+riverctl spawn "wpaperd -d"
+
+# Scripts
+riverctl spawn "$HOME/.scripts/foots.sh"
+
+# Apps
+pgrep 'mako' || riverctl spawn "mako"
+pgrep -f 'wl-paste -t text --watch' || riverctl spawn "wl-paste -t text --watch cliphist store"
+pgrep -f 'wl-paste -t image --watch' || riverctl spawn "wl-paste -t image --watch cliphist store"
+pgrep -f "aria2c --conf=$HOME/.config/aria2/firefox_aria.conf" || riverctl spawn "aria2c --conf-path=$HOME/.config/aria2/firefox_aria.conf"
+pgrep 'kanshi' || riverctl spawn "kanshi"
+
+riverctl spawn "systemctl --user start hyprpolkitagent"
+riverctl spawn "waydroid session start"
+riverctl spawn "waybar"
+riverctl spawn "fcitx5 --replace -d"

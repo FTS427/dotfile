@@ -1,0 +1,45 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "162.19.228.119",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "德国_兰河畔林堡",
+        "pass": "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51",
+        "port": 80,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "xudp",
+            "path": "/http",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 3103,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "ul": "",
+    "yc": -1
+}

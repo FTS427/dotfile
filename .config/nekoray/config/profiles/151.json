@@ -1,0 +1,43 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "twb-zf.jiashumao.net",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "github.com/freefq - 广东省移动 9",
+        "pass": "e2afc128-ca51-39b6-897c-eb2649825df9",
+        "port": 25888,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "tcp",
+            "pac_enc": "",
+            "path": "",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 151,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "trojan",
+    "yc": -1
+}

@@ -1,0 +1,49 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "v33.heduian.link",
+        "aid": 2,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+        "mux": 0,
+        "name": "🇨🇳 江苏省 移动",
+        "port": 30833,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "v33.heduian.link",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/oooo",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "tls_frag": false,
+            "tls_frag_fall_delay": "",
+            "tls_record_frag": false,
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 206,
+    "report": "",
+    "traffic": {
+        "dl": 60838,
+        "ul": 45438
+    },
+    "type": "vmess",
+    "ul": "",
+    "yc": -1
+}

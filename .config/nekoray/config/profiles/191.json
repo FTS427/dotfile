@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "dm-us03-direct14.dm-us03.lc-node.com",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "8d5c6f38-c0bf-3006-9f3f-f89ba16a6ce4",
+        "mux": 0,
+        "name": "github.com/freefq - 美国  49",
+        "port": 443,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "dm-us03-direct14.dm-us03.lc-node.com",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 191,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

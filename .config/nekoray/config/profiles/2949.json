@@ -1,0 +1,45 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "154.197.121.248",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "英国_伦敦",
+        "pass": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+        "port": 8443,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "mositr.freenods.sbs",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "xudp",
+            "path": "twitterfreecodes",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "mositr.freenods.sbs",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 2949,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "ul": "",
+    "yc": -1
+}

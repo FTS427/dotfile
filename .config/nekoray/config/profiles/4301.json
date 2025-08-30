@@ -1,0 +1,45 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "senator.cdniran.info",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "🇺🇸_US_美国",
+        "pass": "43c09ea2-72de-4b63-8da4-d5d4be7819ad",
+        "port": 80,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "SeNaToRNoTLS-05.FligHtbEaN24.Com",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "xudp",
+            "path": "/?ed=2048",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": "firefox"
+        }
+    },
+    "dl": "",
+    "gid": 2,
+    "id": 4301,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "ul": "",
+    "yc": -1
+}

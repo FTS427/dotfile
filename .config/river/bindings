@@ -1,0 +1,62 @@
+#!/bin/sh
+# River bingings
+
+mod=Mod4
+
+riverctl map normal ${mod}+Shift R  spawn "$HOME/.config/river/init"
+riverctl map normal $mod L          spawn "$HOME/.scripts/wofi-powermenu.sh"
+riverctl map normal $mod Return     spawn "footclient"
+riverctl map normal ${mod}+Shift K  close
+riverctl map normal $mod D          spawn "wofi --show drun"
+riverctl map normal $mod I          spawn "wofi-emoji"
+riverctl map normal $mod V          spawn "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+riverctl map normal ${mod}+Shift E  exit
+
+riverctl map normal None Control_R  spawn "fcitx5-remote -t && notify-send -u low -t 500 -a fcitx5 -i 'IM switched' $(fcitx5-remote -n)"
+riverctl map normal None Print      spawn "$HOME/.scripts/screenshort"
+
+riverctl map -repeat normal $mod minus  spawn "amixer sset Master 5%-"
+riverctl map -repeat normal $mod equal  spawn "amixer sset Master 5%+"
+riverctl map normal None F8         spawn "wpaperctl next"
+riverctl map normal None F7         spawn "wpaperctl previous"
+
+# Focus
+riverctl map normal $mod Left       focus-view left
+riverctl map normal $mod Down       focus-view down
+riverctl map normal $mod Up         focus-view up
+riverctl map normal $mod Right      focus-view right
+
+# Window
+riverctl map normal ${mod}+Shift Left   swap next
+riverctl map normal ${mod}+Shift Down   swap next
+riverctl map normal ${mod}+Shift Up     swap previous
+riverctl map normal ${mod}+Shift Right  swap previous
+
+riverctl map normal $mod F      toggle-fullscreen
+riverctl map normal $mod Space  toggle-float
+
+riverctl map normal $mod Tab    focus-previous-tags
+
+riverctl map normal ${mod}+Alt Up send-layout-cmd rivertile "main-count +1"
+riverctl map normal ${mod}+Alt Down send-layout-cmd rivertile "main-count -1"
+
+# Tags
+for i in $(seq 1 9); do
+    tag=$((1 << ($i - 1)))
+    riverctl map normal $mod $i set-focused-tags $tag
+    riverctl map normal ${mod}+Shift $i set-view-tags $tag
+done
+
+# resize
+riverctl map normal $mod R enter-mode resize
+riverctl declare-mode resize
+riverctl map resize None Left  resize horizontal -10
+riverctl map resize None Down  resize vertical   10
+riverctl map resize None Up    resize vertical  -10
+riverctl map resize None Right resize horizontal 10
+riverctl map resize None Return enter-mode normal
+riverctl map resize None Escape enter-mode normal
+
+# Mouse
+riverctl map-pointer normal $mod BTN_LEFT move-view
+riverctl map-pointer normal $mod BTN_RIGHT resize-view

@@ -1,0 +1,45 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "205.233.181.242",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "美国_旧金山",
+        "pass": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+        "port": 443,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "cfed.tgzdyz2.top",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "xudp",
+            "path": "tg@zdyz2",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "cfed.tgzdyz2.top",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 2968,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "ul": "",
+    "yc": -1
+}

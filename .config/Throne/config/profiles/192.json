@@ -1,0 +1,50 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "awes35lesl.blhao0o.dpdns.org",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "method": "aes-128-gcm",
+        "mux": 0,
+        "name": "🇨🇳CN-183.236.51.11-4873",
+        "pass": "01721e43-5389-4f97-b21c-900abb2bda9e",
+        "plugin": "",
+        "port": 12028,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "tcp",
+            "pac_enc": "",
+            "path": "",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "tls_frag": false,
+            "tls_frag_fall_delay": "",
+            "tls_record_frag": false,
+            "utls": ""
+        },
+        "uot": 0
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 192,
+    "report": "",
+    "traffic": {
+        "dl": 49835558,
+        "ul": 5441642
+    },
+    "type": "shadowsocks",
+    "ul": "",
+    "yc": 250
+}

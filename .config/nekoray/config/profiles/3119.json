@@ -1,0 +1,45 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "20.210.64.9",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "flow": "",
+        "mux": 0,
+        "name": "日本_东京",
+        "pass": "6f995056-7802-4a1d-bff7-61678e626c3f",
+        "port": 443,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "zdfdf6.azurewebsites.net",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "xudp",
+            "path": "/",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "zdfdf6.azurewebsites.net",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 3119,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vless",
+    "ul": "",
+    "yc": -1
+}

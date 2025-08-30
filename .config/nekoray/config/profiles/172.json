@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "89.163.157.147",
+        "aid": 64,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "b8aedf50-c4f5-4255-b73d-3779db661d70",
+        "mux": 0,
+        "name": "github.com/freefq - 德国  30",
+        "port": 443,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "auto",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/path/051111230910",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 172,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

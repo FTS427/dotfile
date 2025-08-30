@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "taobao.babazhuji.com",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "2a4918de-adce-4c4e-aa00-88a4227cf6ea",
+        "mux": 0,
+        "name": "github.com/freefq - 美国  19",
+        "port": 443,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "auto",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/didi",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 161,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

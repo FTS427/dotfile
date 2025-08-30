@@ -1,0 +1,16 @@
+style="$HOME"/.config/wofi/style.css
+normal_window=false
+allow_images=true
+term=foot
+exec_search=false
+hide_scroll=true
+matching=fuzzy
+insensitive=true
+location=center
+sort_order=alphabetical
+gtk_dark=true
+image_size=16
+line_wrap=off
+close_on_focus=true
+dynamic_lines=false
+prompt=nya~

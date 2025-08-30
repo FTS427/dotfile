@@ -1,0 +1,37 @@
+#window {
+    margin: 0px;
+    border: 3px solid #88c0d0;
+    background-color: #2e3440;
+}
+
+#input {
+    margin: 0px;
+    border: none;
+    color: #d8dee9;
+    background-color: #3b4252;
+}
+
+#inner-box {
+    margin: 0px;
+    border: none;
+    background-color: #2e3440;
+}
+
+#outer-box {
+    margin: 2px;
+    border: none;
+    background-color: #2e3440;
+}
+
+#text {
+    margin: 0px;
+    border: none;
+    font-size: 16px;
+    color: #d8dee9;
+}
+
+#img {
+    margin: 0px;
+    border: None;
+}
+

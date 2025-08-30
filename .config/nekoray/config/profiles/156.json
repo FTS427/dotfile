@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "aop.ssfree.ru",
+        "aid": 64,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "6fe01f66-4334-11ed-a11b-000017022008",
+        "mux": 0,
+        "name": "github.com/freefq - 希腊  14",
+        "port": 443,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/getweather",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 156,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

@@ -1,0 +1,46 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "russia.com",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "06d65689-a12a-467c-9ff8-0363fe90c0b4",
+        "mux": 0,
+        "name": "加拿大_多伦多",
+        "port": 8880,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "sssub.v2.001.ssrsub.com",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/api/v3/download.getFile",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 3102,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "ul": "",
+    "yc": -1
+}

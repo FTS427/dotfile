@@ -1,0 +1,50 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "91.132.94.200",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "method": "aes-256-cfb",
+        "mux": 0,
+        "name": "⚡ b2n.ir/v2ray-configs | 420",
+        "pass": "f8f7aCzcPKbsF8p3",
+        "plugin": "",
+        "port": 989,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "tcp",
+            "pac_enc": "",
+            "path": "",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "tls_frag": false,
+            "tls_frag_fall_delay": "",
+            "tls_record_frag": false,
+            "utls": ""
+        },
+        "uot": 0
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 201,
+    "report": "",
+    "traffic": {
+        "dl": 4151977,
+        "ul": 492400
+    },
+    "type": "shadowsocks",
+    "ul": "",
+    "yc": -1
+}

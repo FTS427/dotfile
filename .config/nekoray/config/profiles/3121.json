@@ -1,0 +1,46 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "183.236.51.23",
+        "aid": 64,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "418048af-a293-4b99-9b0c-98ca3580dd24",
+        "mux": 0,
+        "name": "中国_广州市",
+        "port": 54104,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "tcp",
+            "pac_enc": "",
+            "path": "",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 1,
+    "id": 3121,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "ul": "",
+    "yc": -1
+}

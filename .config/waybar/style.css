@@ -1,0 +1,72 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, Material Design Icons;
+    font-size: 14px;
+    min-height: 0;
+}
+#workspaces {
+	background-color: #4c566a;
+    font-size: 26px;
+}
+#workspaces button {
+    padding: 0px 6px;
+    color: #eceff4;
+    font-size: 26px;
+}
+#workspaces button.focused {
+    color: #2e3440;
+    background-color: #88c0d0;
+    font-size: 26px;
+}
+#workspaces button.active {
+    color: #2e3440;
+    background-color: #88c0d0;
+    font-size: 26px;
+}
+#workspaces button:hover {
+	background-color: #81a1c1;
+    font-size: 26px;
+}
+#submap.resize {
+    padding: 0px 6px;
+    color: #2e3440;
+    background-color: #ebcb8b;
+    font-size: 10px;
+}
+#pulseaudio, #custom-sound, #network, #clock, #tray, #mpd {
+	padding: 0px 6px;
+}
+
+#custom-launcher {
+    color: #5e81ac;
+    padding: 0px 10px;
+    font-size: 22px;
+}
+
+#custom-power {
+	color: #2e3440;
+	background-color: #bf616a;
+	padding: 0px 10px;
+}
+
+#clock {
+    color: #2e3440;
+    background-color: #b48ead;
+}
+
+#network {
+    color: #2e3440;
+    background-color: #d08770;
+}
+
+#pulseaudio, #custom-sound, #mpd {
+    color: #2e3440;
+    background-color: #ebcb8b;
+}
+
+#tray {
+    color: #2e3440;
+    background-color: #a3be8c;
+}
+

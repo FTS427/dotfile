@@ -1,0 +1,14 @@
+[Unit]
+Description=A high performance web server and a reverse proxy server
+
+[Service]
+Type=forking
+PIDFile=nginx.pid
+SyslogLevel=err
+
+ExecStart=nginx -g 'pid "%t/nginx.pid"; error_log stderr;' -c '%E/nginx/nginx.conf' -p '%D/nginx'
+ExecReload=nginx -g 'pid "%t/nginx.pid"; error_log stderr;' -s reload
+KillMode=mixed
+
+[Install]
+WantedBy=default.target

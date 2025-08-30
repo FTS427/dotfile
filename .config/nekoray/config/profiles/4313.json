@@ -1,0 +1,47 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "p222.panda001.net",
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "method": "aes-256-cfb",
+        "mux": 0,
+        "name": "🇰🇷KR-125.141.31.76-4858",
+        "pass": "qwerREWQ@@",
+        "plugin": "",
+        "port": 15098,
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "tcp",
+            "pac_enc": "",
+            "path": "",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        },
+        "uot": 0
+    },
+    "dl": "",
+    "gid": 2,
+    "id": 4313,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "shadowsocks",
+    "ul": "",
+    "yc": -1
+}

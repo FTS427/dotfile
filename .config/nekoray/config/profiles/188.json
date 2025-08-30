@@ -1,0 +1,44 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "172.67.218.162",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "70d9bf20-3e6b-4cd3-ff28-b62567ff5a23",
+        "mux": 0,
+        "name": "github.com/freefq - 美国CloudFlare节点 46",
+        "port": 443,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "auto",
+            "headers": "",
+            "host": "eu.ptuu.tk",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/ray",
+            "pbk": "",
+            "sec": "tls",
+            "sid": "",
+            "sni": "eu.ptuu.tk",
+            "utls": ""
+        }
+    },
+    "gid": 0,
+    "id": 188,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "yc": -1
+}

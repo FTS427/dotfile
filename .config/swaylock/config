@@ -1,0 +1,14 @@
+# Sway Lock
+
+ignore-empty-password
+show-failed-attempts
+
+image="$HOME/Pictures/nord/ign-0001.png"
+scaling=fill
+
+indicator-caps-lock
+indicator-radius=60
+indicator-thickness=10
+font=JetBrainsMono Nerd Font
+font-size=16
+

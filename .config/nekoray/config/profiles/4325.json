@@ -1,0 +1,46 @@
+{
+    "bean": {
+        "_v": 0,
+        "addr": "45.136.245.177",
+        "aid": 0,
+        "brutal_speed": 0,
+        "c_cfg": "",
+        "c_out": "",
+        "enable_brutal": false,
+        "id": "d8b621e8-3cf1-4919-ae6f-0f7131704291",
+        "mux": 0,
+        "name": "🇺🇸 美国 258",
+        "port": 23153,
+        "sec": "auto",
+        "stream": {
+            "alpn": "",
+            "cert": "",
+            "ed_len": 0,
+            "ed_name": "",
+            "h_type": "none",
+            "headers": "",
+            "host": "",
+            "insecure": false,
+            "method": "",
+            "net": "ws",
+            "pac_enc": "",
+            "path": "/",
+            "pbk": "",
+            "sec": "",
+            "sid": "",
+            "sni": "",
+            "utls": ""
+        }
+    },
+    "dl": "",
+    "gid": 2,
+    "id": 4325,
+    "report": "",
+    "traffic": {
+        "dl": 0,
+        "ul": 0
+    },
+    "type": "vmess",
+    "ul": "",
+    "yc": -1
+}

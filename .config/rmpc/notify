@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+TMP_DIR="/tmp/rmpc"
+mkdir -p "$TMP_DIR"
+
+ALBUM_ART_PATH="$TMP_DIR/notification_cover"
+DEFAULT_ALBUM_ART_PATH="$TMP_DIR/default_album_art.jpg"
+
+[ -z "$TITLE" ] && TITLE="Unknown Title"
+[ -z "$ARTIST" ] && ARTIST="Unknown Artist"
+[ -z "$ALBUM" ] && ALBUM="Unknown Album"
+
+if ! rmpc albumart --output "$ALBUM_ART_PATH"; then
+    ALBUM_ART_PATH="$DEFAULT_ALBUM_ART_PATH"
+fi
+
+ICON="󰝚"
+
+notify-send -i "$ALBUM_ART_PATH" \
+    "$ICON  Now Playing" \
+    "<b>$TITLE</b>\n$ARTIST\n$ALBUM"
+
