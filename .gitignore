@@ -1,2 +1,10 @@
 sync.sh
 *.sql
+.config/Code
+.config/Electron
+.config/gh
+.config/nginx
+.config/QQ
+.config/Star*
+.config/unity*
+
