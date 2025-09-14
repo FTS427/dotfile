@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Qt
+export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# SDL
+export SDL_VIDEO_FULLSCREEN_HEAD=1
+export SDL_VIDEO_CENTERED=1
+export SDL_VIDEODRIVER=wayland,x11
+
+export _JAVA_AWT_WM_NONEREPARENTING=1
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+export GDK_SCALE=1
+export GDK_BACKEND=wayland,x11
+
+export CLUTTER_BACKEND=wayland
+
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=fcitx
+

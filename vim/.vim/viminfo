@@ -1,0 +1,810 @@
+# 这个 viminfo 文件是由 Vim 9.1 生成的。
+# 如果要自行修改请特别小心！
+
+# Viminfo version
+|1,4
+
+# 此文件建立时 'encoding' 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~H
+# 最后 搜索模式:
+~MSle0~/amix
+
+# 命令行 历史记录 (从新到旧):
+:x
+|2,0,1757834576,,"x"
+:q
+|2,0,1757832891,,"q"
+:w
+|2,0,1757782271,,"w"
+:qa
+|2,0,1757673598,,"qa"
+:PlugUpdate
+|2,0,1757673585,,"PlugUpdate"
+:!clang-format %
+|2,0,1757080875,,"!clang-format %"
+:X
+|2,0,1756633690,,"X"
+:redo
+|2,0,1756578543,,"redo"
+:W
+|2,0,1756546627,,"W"
+:delete ^[0~9]
+|2,0,1756526553,,"delete ^[0~9]"
+:delete ^[0~9][0~9]
+|2,0,1756526542,,"delete ^[0~9][0~9]"
+:delete ^[1~9][]
+|2,0,1756526511,,"delete ^[1~9][]"
+:q!
+|2,0,1756526580,,"q!"
+:set number 0
+|2,0,1756526455,,"set number 0"
+:number 0
+|2,0,1756526444,,"number 0"
+:unset number
+|2,0,1756526428,,"unset number"
+:set number
+|2,0,1756526418,,"set number"
+:!cat %
+|2,0,1756526338,,"!cat %"
+:w!
+|2,0,1756526260,,"w!"
+:!mkdir ~/.config/wob
+|2,0,1756525971,,"!mkdir ~/.config/wob"
+:ALELint
+|2,0,1756465016,,"ALELint"
+:ALEInfo
+|2,0,1756464992,,"ALEInfo"
+:RustFmt
+|2,0,1756464189,,"RustFmt"
+:Q
+|2,0,1756424379,,"Q"
+:set wildmode=list:longest
+|2,0,1756424308,,"set wildmode=list:longest"
+:PlugClean
+|2,0,1756424174,,"PlugClean"
+
+# 查找字符串 历史记录 (从新到旧):
+?/amix
+|2,1,1757768878,47,"amix"
+?/bind
+|2,1,1757674051,47,"bind"
+?/Ctrl n
+|2,1,1756633569,47,"Ctrl n"
+?/blu
+|2,1,1756632868,47,"blu"
+?/colo
+|2,1,1756632837,47,"colo"
+?/blur
+|2,1,1756632577,47,"blur"
+?/show
+|2,1,1756628635,47,"show"
+?/new
+|2,1,1756628485,47,"new"
+?/tmux
+|2,1,1756627658,47,"tmux"
+?/ymux
+|2,1,1756627656,47,"ymux"
+?/key
+|2,1,1756627391,47,"key"
+?/scrollback_
+|2,1,1756627229,47,"scrollback_"
+?/^ui
+|2,1,1756627129,47,"^ui"
+?/ui
+|2,1,1756627118,47,"ui"
+?/\$
+|2,1,1756627021,47,"\\$"
+?/theme
+|2,1,1756626682,47,"theme"
+?/shell
+|2,1,1756626338,47,"shell"
+?/sim
+|2,1,1756626320,47,"sim"
+?/kill
+|2,1,1756590619,47,"kill"
+?/reload
+|2,1,1756578349,47,"reload"
+? \<device\>
+|2,1,1756546187,,"\\<device\\>"
+?/exec
+|2,1,1756521080,47,"exec"
+
+# 表达式 历史记录 (从新到旧):
+
+# 输入行 历史记录 (从新到旧):
+@y
+|2,3,1756424175,,"y"
+
+# 输入行 历史记录 (从新到旧):
+
+# 寄存器:
+"0	LINE	0
+	layerrule = noanim, i3bar-river
+|3,0,0,1,1,0,1756578885,"layerrule = noanim, i3bar-river"
+""1	CHAR	0
+	.config/Code
+	.config/Electron
+	.config/gh
+	.config/nginx
+	.config/QQ
+	.config/Star*
+	.config/unity*
+	
+|3,1,1,0,8,0,1757834557,".config/Code",".config/Electron",".config/gh",".config/nginx",".config/QQ",".config/Star*",".config/unity*",""
+"2	LINE	0
+	
+|3,0,2,1,1,0,1757834151,""
+"3	LINE	0
+	## wallpaper
+|3,0,3,1,1,0,1757834151,"## wallpaper"
+"4	LINE	0
+	![wallpaper](/wallpaper/tower-nord.png)
+|3,0,4,1,1,0,1757834150,"![wallpaper](/wallpaper/tower-nord.png)"
+"5	LINE	0
+	#include "cpp_templete.hpp"
+|3,0,5,1,1,0,1757080762,"#include \"cpp_templete.hpp\""
+"6	LINE	0
+	#include <cstring>
+|3,0,6,1,1,0,1757080761,"#include <cstring>"
+"7	CHAR	0
+	printf("%s\n", GREETING);
+	  if (argc >= 2) {
+	    if (std::strcmp(args[1], "--version") == 0 ||
+	        std::strcmp(args[1], "-v") == 0) {
+	      printf("%s\n", PROJ_VERSION);
+	    } else {
+	      printf("Individ arguments!\n");
+	    }
+	  }
+|3,0,7,0,9,0,1757080758,"printf(\"%s\\n\", GREETING);","  if (argc >= 2) {","    if (std::strcmp(args[1], \"--version\") == 0 ||","        std::strcmp(args[1], \"-v\") == 0) {","      printf(\"%s\\n\", PROJ_VERSION);","    } else {","      printf(\"Individ arguments!\\n\");","    }","  }"
+"8	LINE	0
+	
+|3,0,8,1,1,0,1757080749,""
+"9	CHAR	0
+	""augroup fmt
+	    autocmd!
+	    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! execute ':!clang-format -i %'
+	    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! edit!
+	    ""autocmd BufWritePre *.rs silent! execute ':!rustfmt -q %'
+	    ""autocmd BufWritePre *.rs silent! edit!
+	augroup END
+	
+	
+|3,0,9,0,9,0,1757080748,"\"\"augroup fmt","    autocmd!","    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! execute ':!clang-format -i %'","    autocmd BufWritePre *.cpp,*.cc,*.c,*.h,*.hpp silent! edit!","    \"\"autocmd BufWritePre *.rs silent! execute ':!rustfmt -q %'","    \"\"autocmd BufWritePre *.rs silent! edit!","augroup END","",""
+"-	CHAR	0
+	}
+|3,0,36,0,1,0,1756628370,"}"
+
+# 全局变量:
+
+# 文件标记:
+'0  3  17  ~/Git/dotfile/.gitignore
+|4,48,3,17,1757834576,"~/Git/dotfile/.gitignore"
+'1  29  42  ~/Git/dotfile/README.md
+|4,49,29,42,1757834189,"~/Git/dotfile/README.md"
+'2  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,50,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+'3  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,51,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+'4  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,52,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+'5  227  39  ~/.config/hypr/hyprland.conf
+|4,53,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+'6  83  0  ~/.config/cava/config
+|4,54,83,0,1757768792,"~/.config/cava/config"
+'7  1  4  ~/test/rust/math/src/main.rs
+|4,55,1,4,1757760683,"~/test/rust/math/src/main.rs"
+'8  241  0  ~/.config/hypr/hyprland.conf
+|4,56,241,0,1757674324,"~/.config/hypr/hyprland.conf"
+'9  241  0  ~/.config/hypr/hyprland.conf
+|4,57,241,0,1757674324,"~/.config/hypr/hyprland.conf"
+
+# 跳转列表 (从新到旧):
+-'  3  17  ~/Git/dotfile/.gitignore
+|4,39,3,17,1757834576,"~/Git/dotfile/.gitignore"
+-'  1  0  ~/Git/dotfile/.gitignore
+|4,39,1,0,1757834552,"~/Git/dotfile/.gitignore"
+-'  29  42  ~/Git/dotfile/README.md
+|4,39,29,42,1757834189,"~/Git/dotfile/README.md"
+-'  29  42  ~/Git/dotfile/README.md
+|4,39,29,42,1757834189,"~/Git/dotfile/README.md"
+-'  1  0  ~/Git/dotfile/README.md
+|4,39,1,0,1757834047,"~/Git/dotfile/README.md"
+-'  1  0  ~/Git/dotfile/README.md
+|4,39,1,0,1757834047,"~/Git/dotfile/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  3  61  ~/Git/ZOSP/Gallery/README.md
+|4,39,3,61,1757831302,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  1  0  ~/Git/ZOSP/Gallery/README.md
+|4,39,1,0,1757831146,"~/Git/ZOSP/Gallery/README.md"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  3  40  ~/.local/bin/blue-archive_waydroid_start
+|4,39,3,40,1757782272,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  1  0  ~/.local/bin/blue-archive_waydroid_start
+|4,39,1,0,1757782220,"~/.local/bin/blue-archive_waydroid_start"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  227  39  ~/.config/hypr/hyprland.conf
+|4,39,227,39,1757768889,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+-'  38  0  ~/.config/hypr/hyprland.conf
+|4,39,38,0,1757768878,"~/.config/hypr/hyprland.conf"
+
+# 缓冲区列表:
+%~/Git/dotfile/.gitignore	3	17
+
+# 文件内的标记历史记录 (从新到旧):
+
+> ~/Git/dotfile/.gitignore
+	*	1757834576	0
+	"	3	17
+	^	3	18
+	.	3	17
+	+	6	0
+	+	3	15
+	+	4	0
+	+	3	17
+
+> ~/Git/dotfile/README.md
+	*	1757834187	0
+	"	29	42
+	^	29	43
+	.	29	42
+	+	9	12
+	+	11	13
+	+	13	15
+	+	15	33
+	+	17	11
+	+	21	21
+	+	25	31
+	+	13	34
+	+	25	58
+	+	31	0
+	+	30	0
+	+	29	42
+
+> ~/Git/ZOSP/Gallery/README.md
+	*	1757831301	0
+	"	3	61
+	^	3	62
+	.	3	61
+	+	2	0
+	+	3	61
+
+> ~/.local/bin/blue-archive_waydroid_start
+	*	1757782271	0
+	"	3	40
+	^	3	41
+	.	3	40
+	+	3	40
+
+> ~/.config/hypr/hyprland.conf
+	*	1757768889	0
+	"	227	39
+	^	222	51
+	.	222	50
+	+	221	50
+	+	222	50
+	+	4	35
+	+	26	16
+	+	13	0
+	+	14	24
+	+	204	91
+	+	219	95
+	+	276	0
+	+	275	18
+	+	276	12
+	+	277	0
+	+	276	21
+	+	197	24
+	+	116	22
+	+	106	0
+	+	97	25
+	+	100	23
+	+	97	25
+	+	100	23
+	+	133	4
+	+	221	50
+	+	222	50
+
+> ~/.config/cava/config
+	*	1757768791	0
+	"	83	0
+	^	83	0
+	.	83	0
+	+	91	1
+	+	92	1
+	+	88	0
+	+	89	1
+	+	88	0
+	+	89	1
+	+	88	1
+	+	82	0
+	+	83	0
+
+> ~/test/rust/math/src/main.rs
+	*	1757760682	0
+	"	1	4
+
+> ~/Game/Mindustry/src/gradle.properties
+	*	1757223062	0
+	"	4	65
+	^	4	66
+	.	6	65
+	+	7	0
+	+	6	65
+
+> ~/Game/Mindustry/start.sh
+	*	1757168626	0
+	"	5	24
+	^	5	25
+	.	5	24
+	+	1	8
+	+	2	23
+	+	3	27
+	+	5	11
+	+	3	26
+	+	2	22
+	+	4	25
+	+	5	24
+
+> ~/test/cpp/cpp_csp/src/main.cpp
+	*	1757080877	0
+	"	5	27
+	^	5	28
+	.	5	27
+	+	1	0
+	+	1	4
+	+	1	20
+	+	1	0
+	+	1	31
+	+	1	4
+	+	1	0
+	+	1	9
+	+	2	0
+	+	1	4
+	+	4	2
+	+	2	9
+	+	3	31
+	+	4	20
+	+	4	19
+	+	1	0
+	+	9	0
+	+	2	0
+	+	1	0
+	+	3	9
+	+	5	31
+	+	6	17
+	+	8	16
+	+	6	9
+	+	5	27
+
+> ~/.vimrc
+	*	1757080749	0
+	"	95	0
+	.	96	0
+	+	96	0
+
+> ~/test/rust/learn_rust/src/main.rs
+	*	1757078297	0
+	"	4	36
+	^	4	37
+	.	5	0
+	+	1	25
+	+	1	13
+	+	1	30
+	+	1	42
+	+	7	44
+	+	7	39
+	+	1	6
+	+	7	40
+	+	7	61
+	+	7	32
+	+	7	87
+	+	1	16
+	+	1	15
+	+	1	17
+	+	1	18
+	+	1	29
+	+	1	0
+	+	7	0
+	+	1	0
+	+	1	32
+	+	1	37
+	+	1	44
+	+	1	17
+	+	1	120
+	+	1	22
+	+	1	127
+	+	1	59
+	+	1	55
+	+	1	59
+	+	1	40
+	+	1	98
+	+	1	32
+	+	1	129
+	+	1	0
+	+	1	42
+	+	1	23
+	+	1	31
+	+	1	15
+	+	1	23
+	+	1	22
+	+	1	25
+	+	1	15
+	+	1	113
+	+	1	23
+	+	1	0
+	+	1	23
+	+	1	0
+	+	1	113
+	+	1	15
+	+	1	113
+	+	1	15
+	+	1	40
+	+	1	113
+	+	1	15
+	+	1	113
+	+	1	11
+	+	1	114
+	+	1	95
+	+	1	137
+	+	1	98
+	+	1	49
+	+	1	118
+	+	1	21
+	+	1	63
+	+	1	37
+	+	1	98
+	+	1	12
+	+	1	88
+	+	1	44
+	+	1	84
+	+	1	12
+	+	1	0
+	+	1	84
+	+	1	11
+	+	1	48
+	+	1	71
+	+	1	48
+	+	1	33
+	+	1	58
+	+	1	77
+	+	1	8
+	+	1	71
+	+	1	43
+	+	1	80
+	+	1	40
+	+	1	107
+	+	1	0
+	+	1	34
+	+	1	18
+	+	1	0
+	+	7	0
+	+	1	11
+	+	2	54
+	+	3	29
+	+	4	37
+	+	5	0
+
+> ~/test/rust/learn_rust/src/main.cpp
+	*	1757077978	0
+	"	1	0
+
+> ~/test/cpp/cpp_csp/CMakeLists.txt
+	*	1757067670	0
+	"	13	65
+	^	13	66
+	.	13	65
+	+	5	26
+	+	7	77
+	+	36	0
+	+	17	87
+	+	22	0
+	+	24	0
+	+	22	0
+	+	12	32
+	+	13	65
+
+> ~/.config/zellij/config.kdl
+	*	1756633691	0
+	"	160	4
+	^	146	20
+	.	160	0
+	+	314	0
+	+	305	24
+	+	333	0
+	+	352	40
+	+	347	0
+	+	232	17
+	+	347	17
+	+	352	12
+	+	232	24
+	+	347	23
+	+	352	22
+	+	446	0
+	+	452	0
+	+	447	23
+	+	2	27
+	+	7	19
+	+	17	22
+	+	18	14
+	+	17	26
+	+	11	14
+	+	13	14
+	+	14	14
+	+	15	14
+	+	16	8
+	+	11	8
+	+	17	16
+	+	17	17
+	+	17	25
+	+	17	23
+	+	17	26
+	+	15	18
+	+	14	18
+	+	13	14
+	+	12	18
+	+	13	18
+	+	10	19
+	+	7	19
+	+	4	0
+	+	41	19
+	+	75	14
+	+	77	14
+	+	75	8
+	+	78	8
+	+	80	21
+	+	79	23
+	+	81	0
+	+	74	19
+	+	84	14
+	+	86	14
+	+	87	23
+	+	88	21
+	+	89	0
+	+	91	14
+	+	144	0
+	+	185	0
+	+	144	0
+	+	162	14
+	+	17	0
+	+	15	14
+	+	14	14
+	+	13	14
+	+	12	14
+	+	7	16
+	+	18	17
+	+	7	16
+	+	10	16
+	+	21	16
+	+	41	16
+	+	51	16
+	+	52	8
+	+	42	8
+	+	22	8
+	+	75	8
+	+	74	16
+	+	84	8
+	+	83	16
+	+	95	14
+	+	96	16
+	+	97	19
+	+	100	16
+	+	101	19
+	+	104	16
+	+	105	8
+	+	106	19
+	+	171	19
+	+	180	19
+	+	5	0
+	+	182	37
+	+	183	45
+	+	145	19
+	+	151	14
+	+	152	14
+	+	153	14
+	+	154	14
+	+	95	0
+	+	81	0
+	+	75	0
+	+	168	19
+	+	146	20
+	+	160	0
+
+> ~/.config/foot/foot.ini
+	*	1756632843	0
+	"	102	8
+	^	102	9
+	.	102	8
+	+	197	27
+	+	212	0
+	+	210	0
+	+	211	0
+	+	213	15
+	+	212	15
+	+	219	7
+	+	221	0
+	+	222	0
+	+	221	18
+	+	222	18
+	+	257	0
+	+	260	5
+	+	261	0
+	+	260	8
+	+	102	8

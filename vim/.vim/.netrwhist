@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/fts427/.zsh/zfunc'
+let g:netrw_dirhist_2='/home/fts427/.config/hypr'
+let g:netrw_dirhist_1='/home/fts427/test/rust/grep/src'
+let g:netrw_dirhist_0='/home/fts427/.config/river'
+let g:netrw_dirhist_9='/mnt/data_disk/oppo_a31t/src/los_12.1/.repo/manifests/ref'
+let g:netrw_dirhist_8='/mnt/data_disk/oppo_a31t/test/twrp_dt/AIK-Linux-mirror'
+let g:netrw_dirhist_7='/home/fts427/test/rust/guess_number/target'
+let g:netrw_dirhist_6='/home/fts427/test/rust/guess_number/src'
+let g:netrw_dirhist_5='/mnt/data_disk/oppo_a31t/build_src/los_12.1/kernel/oppo/a31t/drivers/media/platform/msm/camera_v2/sensor/cci'
+let g:netrw_dirhist_4='/mnt/data_disk/oppo_a31t/build_src/los_12.1/kernel/oppo/a31t/drivers/media/platform/msm/camera_v2'

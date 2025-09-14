@@ -1,0 +1,10 @@
+#!/bin/sh
+
+geometry=$(slurp)
+if [ -z "$geometry" ]; then
+    echo "Selection canceled, exiting." >&2
+    exit 1
+fi
+
+grim -g "$geometry" - | wl-copy
+

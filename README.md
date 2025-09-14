@@ -6,28 +6,24 @@ Suitable for archlinux
 
 ## Config
 
-DE: Hyprland, i3wm(won't update)
+DE: Hyprland
 
-Terminal: alacritty
+Terminal: foot
 
-Bar: waybar, polybar(won't update)
+Bar: i3bar-river with i3status-rust
 
-Show system info: fastfetch, htop, neofetch(won't update)
+Show system info: fastfetch, htop
 
-Editor: vim(plugin with [vim-plug](https://github.com/junegunn/vim-plug))
+Editor: vim (plugin with [vim-plug](https://github.com/junegunn/vim-plug))
 
 Shell: zsh
 
-Media: mpv, mpd, rmpc, ncmpcpp(won't update)
+Media: mpv, mpd, rmpc
 
 Download manager: aria2
 
-And config files for: mako, joshuto, dunst(won't update)
+And config files for: mako, cava, zellij, wpaperd and so on
 
 Theme: Nord, Material
 
-![perfect_workspace](/imgs/image.png)
-
-## wallpaper
-
-![wallpaper](/wallpaper/tower-nord.png)
+![perfect_workspace](assets/screenshot.png)

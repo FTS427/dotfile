@@ -1,0 +1,45 @@
+icons_format = " {icon} "
+error_format = "$full_error_message"
+
+[theme]
+theme = "nord-dark"
+[theme.overrides]
+idle_fg = "#d8dee9"
+
+info_fg = "#eceff4"
+good_fg = "#a3be8c"
+warning_fg = "#ebcb8b"
+critical_fg = "#bf616a"
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "sound"
+driver = "alsa"
+name = "Master"
+device = "default"
+step_width = 2
+format = "$icon {$volume|}"
+format_alt = "$icon"
+[block.theme_overrides]
+idle_fg = "#2e3440"
+idle_bg = "#ebcb8b"
+
+[[block]]
+block = "net"
+device = "eno1"
+interval = 60
+missing_format = "x"
+format = "$icon {$ip|}"
+[block.theme_overrides]
+idle_fg = "#2e3440"
+idle_bg = "#d08770"
+
+[[block]]
+block = "time"
+interval = 60
+format = "$icon $timestamp.datetime(f:'%H:%M') "
+[block.theme_overrides]
+idle_fg = "#2e3440"
+idle_bg = "#b48ead"
+

@@ -1,0 +1,39 @@
+font = "JetBrainsMono Nerd Font 16"
+height = 30
+command = "i3status-rs -j2"
+
+background = "#2e3440ff"
+color = "#eceff4ff"
+separator = "#d8dee9ff"
+
+tag_fg = "#eceff4ff"
+tag_bg = "#2e3440ff"
+
+tag_focused_fg = "#2e3440ff"
+tag_focused_bg = "#88c0d0ff"
+
+tag_urgent_fg = "#2e3440ff"
+tag_urgent_bg = "#bf616aff"
+
+tag_inactive_fg = "#2e3440ff"
+tag_inactive_bg = "#4c566aff"
+
+margin_top = 0
+margin_bottom = 0
+margin_left = 0
+margin_right = 0
+separator_width = 2.0
+tags_r = 0.0
+tags_padding = 10.0
+tags_margin = 0.0
+blocks_r = 0.0
+blocks_overlap = 0.0
+
+hide_inactive_tags = true
+show_tags = true
+show_layout_name = true
+show_mode = true
+
+[output.HDMI-A-1]
+enable = true
+
