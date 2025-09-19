@@ -1,5 +1,7 @@
 sync.sh
 *.sql
 vim/.vim/plugged/*
-
+vim/.vim/.viminfo
+zsh/.zsh/compdump
+zsh/.zsh/histfile
 
