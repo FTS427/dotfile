@@ -6,7 +6,7 @@ Suitable for archlinux
 
 ## Config
 
-DE: Hyprland
+DE: River
 
 Terminal: foot
 
