@@ -3,20 +3,24 @@
 
 mod=Mod4
 
-riverctl map normal ${mod}+Shift R  spawn "$HOME/.config/river/init"
-riverctl map normal $mod L          spawn "$HOME/.scripts/wofi-powermenu.sh"
+APPMENU=${HOME}/.scripts/wmenu_appmenu.sh
+POWERMENU=${HOME}/.scripts/wmenu_powermenu.sh
+MENU=${HOME}/.scripts/wemnu_themed.sh
+
+riverctl map normal ${mod}+Shift R  spawn "${HOME}/.config/river/init"
+riverctl map normal $mod L          spawn "$POWERMENU"
 riverctl map normal $mod Return     spawn "footclient"
-riverctl map normal ${mod}+Shift K  close
-riverctl map normal $mod D          spawn "wofi --show drun"
-riverctl map normal $mod I          spawn "wofi-emoji"
-riverctl map normal $mod V          spawn "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+riverctl map normal ${mod}+Shift C  close
+riverctl map normal $mod D          spawn "$APPMENU"
+riverctl map normal $mod I          spawn "${HOME}/.scripts/wmenu_emoji.sh"
+riverctl map normal $mod V          spawn "cliphist list | $MENU -p "copybar" -l 6 | cliphist decode | wl-copy -n"
 riverctl map normal ${mod}+Shift E  exit
 
-riverctl map normal None Control_R  spawn "fcitx5-remote -t && notify-send -u low -t 500 -a fcitx5 -i 'IM switched' $(fcitx5-remote -n)"
-riverctl map normal None Print      spawn "$HOME/.scripts/screenshort"
+riverctl map normal None Control_R  spawn "${HOME}/.scripts/switch_im.sh"
+riverctl map normal None Print      spawn "${HOME}/.scripts/screenshot"
 
-riverctl map -repeat normal $mod minus  spawn "amixer sset Master 5%-"
-riverctl map -repeat normal $mod equal  spawn "amixer sset Master 5%+"
+riverctl map -repeat normal $mod minus  spawn "amixer sset Master 1%-"
+riverctl map -repeat normal $mod equal  spawn "amixer sset Master 1%+"
 riverctl map normal None F8         spawn "wpaperctl next"
 riverctl map normal None F7         spawn "wpaperctl previous"
 
@@ -35,8 +39,6 @@ riverctl map normal ${mod}+Shift Right  swap previous
 riverctl map normal $mod F      toggle-fullscreen
 riverctl map normal $mod Space  toggle-float
 
-riverctl map normal $mod Tab    focus-previous-tags
-
 riverctl map normal ${mod}+Alt Up send-layout-cmd rivertile "main-count +1"
 riverctl map normal ${mod}+Alt Down send-layout-cmd rivertile "main-count -1"
 
@@ -48,7 +50,7 @@ for i in $(seq 1 9); do
 done
 
 # resize
-riverctl map normal $mod R enter-mode resize
+riverctl map normal Mod1 R enter-mode resize
 riverctl declare-mode resize
 riverctl map resize None Left  resize horizontal -10
 riverctl map resize None Down  resize vertical   10

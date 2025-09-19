@@ -24,7 +24,7 @@ zstyle :compinstall filename '${HOME}/.zshrc'
 
 # DE
 if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
-   exec Hyprland
+   exec river
 fi
 
 # Func
