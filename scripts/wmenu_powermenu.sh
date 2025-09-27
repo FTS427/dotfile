@@ -26,13 +26,13 @@ open_menu() {
             rmpc pause 2>/dev/null || true
             amixer sset Master mute 2>/dev/null || true
             systemctl suspend
-            hyprlock
+            swaylock
             ;;
         "$logout")
-            hyprctl dispatch exit 0
+            riverctl exit
             ;;
         "$lockscreen")
-            hyprlock
+            swaylock
             ;;
         *)
             exit 0

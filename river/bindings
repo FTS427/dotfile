@@ -3,26 +3,27 @@
 
 mod=Mod4
 
-APPMENU=${HOME}/.scripts/wmenu_appmenu.sh
-POWERMENU=${HOME}/.scripts/wmenu_powermenu.sh
 MENU=${HOME}/.scripts/wemnu_themed.sh
 
 riverctl map normal ${mod}+Shift R  spawn "${HOME}/.config/river/init"
-riverctl map normal $mod L          spawn "$POWERMENU"
+riverctl map normal $mod L          spawn "${HOME}/.scripts/wmenu_powermenu.sh"
 riverctl map normal $mod Return     spawn "footclient"
 riverctl map normal ${mod}+Shift C  close
-riverctl map normal $mod D          spawn "$APPMENU"
+riverctl map normal $mod D          spawn "${HOME}/.scripts/wmenu_appmenu.sh"
 riverctl map normal $mod I          spawn "${HOME}/.scripts/wmenu_emoji.sh"
-riverctl map normal $mod V          spawn "cliphist list | $MENU -p "copybar" -l 6 | cliphist decode | wl-copy -n"
-riverctl map normal ${mod}+Shift E  exit
+riverctl map normal $mod V          spawn "${HOME}/.scripts/wmenu_copybar.sh"
+riverctl map normal ${mod}+Shift E  spawn "${HOME}/.scripts/exit_river.sh"
 
 riverctl map normal None Control_R  spawn "${HOME}/.scripts/switch_im.sh"
 riverctl map normal None Print      spawn "${HOME}/.scripts/screenshot"
+riverctl map normal ${mod} P        spawn "${HOME}/.scripts/color_picker.sh"
 
 riverctl map -repeat normal $mod minus  spawn "amixer sset Master 1%-"
 riverctl map -repeat normal $mod equal  spawn "amixer sset Master 1%+"
+riverctl map normal ${mod}+Shift backspace spawn "amixer sset Master toggle"
 riverctl map normal None F8         spawn "wpaperctl next"
 riverctl map normal None F7         spawn "wpaperctl previous"
+riverctl map normal ${mod}+Shift D spawn "${HOME}/.scripts/dnd.sh"
 
 # Focus
 riverctl map normal $mod Left       focus-view left

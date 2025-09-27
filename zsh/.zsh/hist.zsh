@@ -1,5 +1,5 @@
 # History
-HISTFILE=${ZFILE}/histfile
+HISTFILE=${HOME}/.cache/zsh/histfile
 HISTSIZE=4096
 SAVEHIST=4096
 

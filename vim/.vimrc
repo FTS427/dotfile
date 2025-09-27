@@ -20,7 +20,7 @@ filetype on
 filetype plugin indent on
 syntax on
 
-set viminfo='16,<64,:32,%,n~/.vim/viminfo
+set viminfo='16,<64,:32,%,n~/.cache/vim/viminfo
 set wildmenu
 set wildmode=list:longest
 
