@@ -3,10 +3,10 @@
 #![enable(unwrap_variant_newtypes)]
 (
     album_art_position: Right,
-    album_art_width_percent: 38,
+    album_art_width_percent: 40,
 
     show_song_table_header: true,
-    draw_borders: true,
+    draw_borders: false,
 
     browser_column_widths: [20, 38, 42],
 
