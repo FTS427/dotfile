@@ -1,6 +1,6 @@
 profile {
 	output HDMI-A-1 {
-		mode 1920x1080@74.9
+		mode 1920x1080@74.973000
 		position 0,0
 		scale 1
 		adaptive_sync off

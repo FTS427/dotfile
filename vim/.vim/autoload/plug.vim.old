@@ -1,58 +1,5 @@
 " vim-plug: Vim plugin manager
 " ============================
-"
-" 1. Download plug.vim and put it in 'autoload' directory
-"
-"   # Vim
-"   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"
-"   # Neovim
-"   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"
-" 2. Add a vim-plug section to your ~/.vimrc (or ~/.config/nvim/init.vim for Neovim)
-"
-"   call plug#begin()
-"
-"   " List your plugins here
-"   Plug 'tpope/vim-sensible'
-"
-"   call plug#end()
-"
-" 3. Reload the file or restart Vim, then you can,
-"
-"     :PlugInstall to install plugins
-"     :PlugUpdate  to update plugins
-"     :PlugDiff    to review the changes from the last update
-"     :PlugClean   to remove plugins no longer in the list
-"
-" For more information, see https://github.com/junegunn/vim-plug
-"
-"
-" Copyright (c) 2024 Junegunn Choi
-"
-" MIT License
-"
-" Permission is hereby granted, free of charge, to any person obtaining
-" a copy of this software and associated documentation files (the
-" "Software"), to deal in the Software without restriction, including
-" without limitation the rights to use, copy, modify, merge, publish,
-" distribute, sublicense, and/or sell copies of the Software, and to
-" permit persons to whom the Software is furnished to do so, subject to
-" the following conditions:
-"
-" The above copyright notice and this permission notice shall be
-" included in all copies or substantial portions of the Software.
-"
-" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-" EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-" MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-" NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-" LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-" OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-" WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 if exists('g:loaded_plug')
   finish
 endif
@@ -372,10 +319,8 @@ function! plug#end()
 
   for [cmd, names] in items(lod.cmd)
     execute printf(
-    \ has('patch-7.4.1898')
-    \ ? 'command! -nargs=* -range -bang -complete=file %s call s:lod_cmd(%s, "<bang>", <line1>, <line2>, <q-args>, <q-mods> ,%s)'
-    \ : 'command! -nargs=* -range -bang -complete=file %s call s:lod_cmd(%s, "<bang>", <line1>, <line2>, <q-args>, %s)'
-    \ , cmd, string(cmd), string(names))
+    \ 'command! -nargs=* -range -bang -complete=file %s call s:lod_cmd(%s, "<bang>", <line1>, <line2>, <q-args>, %s)',
+    \ cmd, string(cmd), string(names))
   endfor
 
   for [map, names] in items(lod.map)
@@ -653,19 +598,11 @@ function! s:lod_ft(pat, names)
   call s:doautocmd('filetypeindent', 'FileType')
 endfunction
 
-if has('patch-7.4.1898')
-  function! s:lod_cmd(cmd, bang, l1, l2, args, mods, names)
-    call s:lod(a:names, ['ftdetect', 'after/ftdetect', 'plugin', 'after/plugin'])
-    call s:dobufread(a:names)
-    execute printf('%s %s%s%s %s', a:mods, (a:l1 == a:l2 ? '' : (a:l1.','.a:l2)), a:cmd, a:bang, a:args)
-  endfunction
-else
-  function! s:lod_cmd(cmd, bang, l1, l2, args, names)
-    call s:lod(a:names, ['ftdetect', 'after/ftdetect', 'plugin', 'after/plugin'])
-    call s:dobufread(a:names)
-    execute printf('%s%s%s %s', (a:l1 == a:l2 ? '' : (a:l1.','.a:l2)), a:cmd, a:bang, a:args)
-  endfunction
-endif
+function! s:lod_cmd(cmd, bang, l1, l2, args, names)
+  call s:lod(a:names, ['ftdetect', 'after/ftdetect', 'plugin', 'after/plugin'])
+  call s:dobufread(a:names)
+  execute printf('%s%s%s %s', (a:l1 == a:l2 ? '' : (a:l1.','.a:l2)), a:cmd, a:bang, a:args)
+endfunction
 
 function! s:lod_map(map, names, with_prefix, prefix)
   call s:lod(a:names, ['ftdetect', 'after/ftdetect', 'plugin', 'after/plugin'])
@@ -1085,16 +1022,12 @@ function! s:hash_match(a, b)
   return stridx(a:a, a:b) == 0 || stridx(a:b, a:a) == 0
 endfunction
 
-function! s:disable_credential_helper()
-  return s:git_version_requirement(2) && get(g:, 'plug_disable_credential_helper', 1)
-endfunction
-
 function! s:checkout(spec)
   let sha = a:spec.commit
   let output = s:git_revision(a:spec.dir)
   let error = 0
   if !empty(output) && !s:hash_match(sha, s:lines(output)[0])
-    let credential_helper = s:disable_credential_helper() ? '-c credential.helper= ' : ''
+    let credential_helper = s:git_version_requirement(2) ? '-c credential.helper= ' : ''
     let output = s:system(
           \ 'git '.credential_helper.'fetch --depth 999999 && git checkout '.plug#shellescape(sha).' --', a:spec.dir)
     let error = v:shell_error
@@ -1173,7 +1106,7 @@ function! s:update_impl(pull, force, args) abort
     let $GIT_TERMINAL_PROMPT = 0
     for plug in values(todo)
       let plug.uri = substitute(plug.uri,
-            \ '^https://git::@github\.com', 'https://github.com', '')
+            \ '^https://git::@github\.com', 'https://github.moeyy.xyz/https://github.com', '')
     endfor
   endif
 
@@ -1603,7 +1536,7 @@ while 1 " Without TCO, Vim stack is bound to explode
     let [error, _] = s:git_validate(spec, 0)
     if empty(error)
       if pull
-        let cmd = s:disable_credential_helper() ? ['git', '-c', 'credential.helper=', 'fetch'] : ['git', 'fetch']
+        let cmd = s:git_version_requirement(2) ? ['git', '-c', 'credential.helper=', 'fetch'] : ['git', 'fetch']
         if has_tag && !empty(globpath(spec.dir, '.git/shallow'))
           call extend(cmd, ['--depth', '99999999'])
         endif

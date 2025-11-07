@@ -8,7 +8,43 @@ scaling=fill
 
 indicator-caps-lock
 indicator-radius=60
-indicator-thickness=10
+indicator-thickness=15
+color=2e3440
 font=JetBrainsMono Nerd Font
 font-size=16
+
+bs-hl-color=ebcb8b
+caps-lock-bs-hl-color=ebcb8b
+caps-lock-key-hl-color=ebcb8b
+
+inside-color=2e3440
+inside-clear-color=5e81ac
+inside-caps-lock-color=ebcb8b
+inside-ver-color=d08770
+inside-wrong-color=bf616a
+key-hl-color=81a1c1
+
+layout-bg-color=2e3440
+layout-border-color=88c0d0
+layout-text-color=eceff4
+
+line-color=8fbcbb
+line-clear-color=5e81ac
+line-caps-lock-color=ebcb8b
+line-ver-color=d08770
+line-wrong-color=bf616a
+
+ring-color=81a1c1
+ring-clear-color=5e81ac
+ring-caps-lock-color=ebcb8b
+ring-ver-color=d08770
+ring-wrong-color=bf616a
+
+separator-color=eceff4
+
+text-color=eceff4
+text-clear-color=5e81ac
+text-caps-lock-color=ebcb8b
+text-ver-color=d08770
+text-wrong-color=bf616a
 

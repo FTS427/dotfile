@@ -25,8 +25,8 @@ zstyle :compinstall filename '${HOME}/.zshrc'
 . ${ZPLUG_SYS}/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # DE
-if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then 
-  env $(cat ${HOME}/.config/environment.d/riverenv.conf | sed ':a;N;$!ba;s/\n/ /g') river
+if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then 
+  ${HOME}/.scripts/choose_de.zsh
 fi
 
 # Func
@@ -40,5 +40,6 @@ export SKIM_DEFAULT_OPTIONS="--color=fg:#${nord6},bg:#${nord0},matched:#${nord4}
                       --no-clear-start \
                       --layout reverse \
                       --height 20% \
-                      --cmd-prompt \$\>"
+                      --cmd-prompt \$\> \
+                      --ansi -i -c 'rg --color=always --line-number \"{}\"'"
 

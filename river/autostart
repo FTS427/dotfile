@@ -1,26 +1,12 @@
 #!/bin/sh
 # River autostart
 
-killall -q fcitx5 waydroid i3bar-river
-
 env LANG=zh_CN.UTF-8
 
 # Wallpaers
-riverctl spawn "wpaperd -d"
+pgrep -f 'swww-daemon -f argb -l background -q' || riverctl spawn "swww-daemon -f argb -l background -q && swww img ${HOME}/Picture/nord/wild.png"
 
-# Scripts
-riverctl spawn "$HOME/.scripts/foots.sh"
+#pgrep -f 'waydroid session start' || riverctl spawn "waydroid session start"
 
-# Apps
-pgrep 'mako' || riverctl spawn "mako"
-pgrep -f 'wl-paste -t text --watch' || riverctl spawn "wl-paste -t text --watch cliphist store"
-pgrep -f 'wl-paste -t image --watch' || riverctl spawn "wl-paste -t image --watch cliphist store"
-pgrep -f 'kanshi' || riverctl spawn "kanshi"
-pgrep 'wob' || riverctl spawn "${HOME}/.local/bin/wobd"
-pgrep -f "aria2c --conf=${HOME}/.config/aria2/firefox_aria.conf" || riverctl spawn "aria2c --conf-path=${HOME}/.config/aria2/firefox_aria.conf"
-pgrep 'kanshi' || riverctl spawn "kanshi"
-pgrep -f '/usr/lib/mate-polkit/polkit-mate-authentication-agent-1' || riverctl spawn "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+#riverctl spawn "waydroid session start"
 
-riverctl spawn "waydroid session start"
-riverctl spawn "i3bar-river"
-riverctl spawn "fcitx5 --replace -d"

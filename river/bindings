@@ -2,28 +2,29 @@
 # River bingings
 
 mod=Mod4
+command -v filtile >/dev/null 2>&1 && tiler="filtile" || tiler="rivertile"
 
 MENU=${HOME}/.scripts/wemnu_themed.sh
 
-riverctl map normal ${mod}+Shift R  spawn "${HOME}/.config/river/init"
-riverctl map normal $mod L          spawn "${HOME}/.scripts/wmenu_powermenu.sh"
+riverctl map normal ${mod}+Shift r  spawn "${HOME}/.config/river/init"
+riverctl map normal $mod l          spawn "${HOME}/.scripts/wmenu_powermenu.sh"
 riverctl map normal $mod Return     spawn "footclient"
-riverctl map normal ${mod}+Shift C  close
-riverctl map normal $mod D          spawn "${HOME}/.scripts/wmenu_appmenu.sh"
-riverctl map normal $mod I          spawn "${HOME}/.scripts/wmenu_emoji.sh"
-riverctl map normal $mod V          spawn "${HOME}/.scripts/wmenu_copybar.sh"
-riverctl map normal ${mod}+Shift E  spawn "${HOME}/.scripts/exit_river.sh"
+riverctl map normal ${mod}+Shift c  close
+riverctl map normal $mod d          spawn "${HOME}/.scripts/wmenu_appmenu.sh"
+riverctl map normal $mod i          spawn "${HOME}/.scripts/wmenu_emoji.sh"
+riverctl map normal $mod v          spawn "${HOME}/.scripts/wmenu_copybar.sh"
+riverctl map normal ${mod}+Shift e  spawn "${HOME}/.scripts/exit_river.sh"
 
 riverctl map normal None Control_R  spawn "${HOME}/.scripts/switch_im.sh"
 riverctl map normal None Print      spawn "${HOME}/.scripts/screenshot"
-riverctl map normal ${mod} P        spawn "${HOME}/.scripts/color_picker.sh"
+riverctl map normal ${mod} p        spawn "${HOME}/.scripts/color_picker.sh"
 
 riverctl map -repeat normal $mod minus  spawn "amixer sset Master 1%-"
 riverctl map -repeat normal $mod equal  spawn "amixer sset Master 1%+"
 riverctl map normal ${mod}+Shift backspace spawn "amixer sset Master toggle"
 riverctl map normal None F8         spawn "wpaperctl next"
 riverctl map normal None F7         spawn "wpaperctl previous"
-riverctl map normal ${mod}+Shift D spawn "${HOME}/.scripts/dnd.sh"
+riverctl map normal ${mod}+Shift d spawn "${HOME}/.scripts/dnd.sh"
 
 # Focus
 riverctl map normal $mod Left       focus-view left
@@ -32,34 +33,47 @@ riverctl map normal $mod Up         focus-view up
 riverctl map normal $mod Right      focus-view right
 
 # Window
-riverctl map normal ${mod}+Shift Left   swap next
-riverctl map normal ${mod}+Shift Down   swap next
-riverctl map normal ${mod}+Shift Up     swap previous
-riverctl map normal ${mod}+Shift Right  swap previous
+riverctl map normal ${mod}+Shift Left   swap left
+riverctl map normal ${mod}+Shift Down   swap down
+riverctl map normal ${mod}+Shift Up     swap up
+riverctl map normal ${mod}+Shift Right  swap right
 
-riverctl map normal $mod F      toggle-fullscreen
+riverctl map normal $mod f      toggle-fullscreen
 riverctl map normal $mod Space  toggle-float
+riverctl map normal $mod z      zoom
 
-riverctl map normal ${mod}+Alt Up send-layout-cmd rivertile "main-count +1"
-riverctl map normal ${mod}+Alt Down send-layout-cmd rivertile "main-count -1"
+if [ "$tiler" == "filtile" ]; then
+    riverctl map normal $mod m send-layout-cmd filtile "monocle"
+    riverctl map normal ${mod}+Alt Up send-layout-cmd filtile "main-location top"
+    riverctl map normal ${mod}+Alt Down send-layout-cmd filtile "main-location bottom"
+    riverctl map normal ${mod}+Alt Left send-layout-cmd filtile "main-location left"
+    riverctl map normal ${mod}+Alt Right send-layout-cmd filtile "main-location right"
+else
+    riverctl map normal ${mod}+Alt Up send-layout-cmd rivertile "main-count +1"
+    riverctl map normal ${mod}+Alt Down send-layout-cmd rivertile "main-count -1"
+    riverctl map -repeat normal ${mod}+Alt Left send-layout-cmd rivertile "main-ratio -0.01"
+    riverctl map -repeat normal ${mod}+Alt Right send-layout-cmd rivertile "main-ratio +0.01"
+fi
 
 # Tags
-for i in $(seq 1 9); do
-    tag=$((1 << ($i - 1)))
-    riverctl map normal $mod $i set-focused-tags $tag
-    riverctl map normal ${mod}+Shift $i set-view-tags $tag
+for i in $(seq 1 9)
+do
+    tag=$((1 << ("$i" - 1)))
+    riverctl map normal $mod $i         set-focused-tags $tag
+    riverctl map normal ${mod}+Shift $i set-view-tags    $tag
 done
 
-# resize
+# resize floating windows
 riverctl map normal Mod1 R enter-mode resize
 riverctl declare-mode resize
-riverctl map resize None Left  resize horizontal -10
-riverctl map resize None Down  resize vertical   10
-riverctl map resize None Up    resize vertical  -10
-riverctl map resize None Right resize horizontal 10
+riverctl map -repeat resize None Up     resize vertical     5
+riverctl map -repeat resize None Down   resize vertical     -5
+riverctl map -repeat resize None Left   resize horizontal   5
+riverctl map -repeat resize None Right  resize horizontal   -5
 riverctl map resize None Return enter-mode normal
 riverctl map resize None Escape enter-mode normal
 
 # Mouse
 riverctl map-pointer normal $mod BTN_LEFT move-view
 riverctl map-pointer normal $mod BTN_RIGHT resize-view
+riverctl map-pointer normal $mod BTN_MIDDLE toggle-float

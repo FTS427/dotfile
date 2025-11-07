@@ -3,7 +3,7 @@
 set -euo pipefail
 
 declare -A MIRRORS=(
-    ["github.com"]="https://ghproxy.net/https://github.com/"
+    ["github.com"]="https://ghproxy.cn/https://github.com/"
     ["downloads.sourceforge.net"]="https://liquidtelecom.dl.sourceforge.net/"
 )
 
