@@ -18,8 +18,10 @@ set ruler
 set nocompatible
 set noshowmode
 set laststatus=2
-set mouse=a
-set ttymouse=xterm
+set updatetime=100
+set splitbelow
+set splitright
+set mouse=
 
 filetype on
 filetype plugin indent on
@@ -27,9 +29,14 @@ syntax on
 
 set viminfo='16,<64,:32,%,n~/.cache/vim/viminfo
 set wildmenu
-set wildmode=list:longest
+set wildmode=noselect:lastused,full 
+set wildoptions=pum,fuzzy
 set complete+=i,k,d
+set completeopt=menuone,noinsert,fuzzy,popup
 set completepopup=height:5,width:50,highlight:InfoPopup
+set completefunc+=FuzzyCompleteFunc
+set autocomplete
+set pumheight=10
 
 " Key binds
 let mapleader="<CR>"
@@ -48,6 +55,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'slint-ui/vim-slint'
 Plug 'skim-rs/skim'
+Plug 'imsnif/kdl.vim'
 
 call plug#end()
 
@@ -113,14 +121,12 @@ let g:ale_enabled = 1
 let g:ale_completion_enabled = 1
 let g:ale_set_balloons = 1
 let g:ale_completion_autoimport = 1
-let g:ale_completion_delay = 120
 let g:ale_linters = {
       \ 'rust': ['analyzer'],
       \ 'c': ['clangd'],
       \ 'cpp': ['clangd'],
       \ 'lua': ['lua-language-server']
       \ }
-let g:ale_linters_explicit = 1
 let g:ale_c_clangd_executable = '/usr/bin/clangd'
 let g:ale_cpp_clangd_executable = '/usr/bin/clangd'
 let g:ale_rust_analyzer_executable = '/usr/bin/rust-analyzer'
@@ -130,9 +136,6 @@ let g:ale_sign_warning = '>'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 1
 
 let g:ale_lsp_manage_servers = 1
 let g:ale_lsp_auto_start = 1
@@ -147,11 +150,8 @@ let g:ale_floating_window_border = ['|','-','*','*','*','*','|','-']
 set omnifunc=ale#completion#OmniFunc
 
 autocmd CmdlineChanged [:/\?] call wildtrigger()
-set wildmode=noselect:lastused,full wildoptions=pum
-
 autocmd CmdlineEnter [/\?] set pumheight=8
 autocmd CmdlineLeave [/\?] set pumheight&
-autocmd InsertEnter, BufWritePost * nohlsearch
 
 augroup lightline#ale
   autocmd!
@@ -159,4 +159,41 @@ augroup lightline#ale
   autocmd User ALELintPost call lightline#update()
   autocmd User ALEFixPost call lightline#update()
 augroup END
+
+" Fuzzy Complete (Thank @deathbeam!)
+let g:fuzzyfunc = &omnifunc
+function! FuzzyCompleteFunc(findstart, base)
+  let Func = function(get(g:, 'fuzzyfunc', &omnifunc))
+  let results = Func(a:findstart, a:base)
+  
+  if a:findstart
+    return results
+  endif
+
+  if type(results) == type({}) && has_key(results, 'words')
+    let l:words = []
+    for result in results.words
+      call add(words, result.word . ' ' . result.menu)
+    endfor
+  elseif len(results)
+    let l:words = results
+  endif
+
+  if len(l:words)
+    let result = skim#run({ 'source': l:words, 'down': '40%', 'options': printf('--query "%s" +s', a:base) })
+
+    if empty(result)
+      return [ a:base ]
+    endif
+
+    return [ split(result[0])[0] ]
+  else
+    return [ a:base ]
+  endif
+endfunction
+
+" Supertab
+let g:SuperTabClosePreviewOnPopupClose = 1
+
+nmap <esc><esc> :noh<return>
 

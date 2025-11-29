@@ -15,6 +15,26 @@
     header_background_color: "#3b4252",
     modal_background_color: "#434c5e",
 
+    cava: (
+        bar_symbols: ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
+        inverted_bar_symbols: ['▔', '🮂', '🮃', '▀', '🮄', '🮅', '🮆', '█'],
+
+        bar_width: 2,
+        bar_spacing: 1,
+
+        orientation: Bottom,
+        bar_color: Gradient({
+            5: "#5e81ac",
+            15: "#81a1c1",
+            30: "#8fbcbb",
+            45: "#a3be8c",
+            50: "#ebcb8b",
+            60: "#d08770",
+            75: "#b48ead",
+            85: "#bf616a",
+        })
+    ),
+
     tab_bar: (
         enabled: true,
         active_style: (fg: "#2e3440", bg: "#88c0d0", modifiers: "Bold"),
@@ -38,12 +58,14 @@
         elapsed_style: (fg: "#88c0d0"),
         thumb_style: (fg: "#d8dee9", bg: "#4c566a"),
     ),
+    
     scrollbar: (
         symbols: ["│", "█", " ", " "],
         track_style: (fg: "#4c566a"),
         ends_style: (fg: "#4c566a"),
         thumb_style: (fg: "#88c0d0"),
     ),
+    
     song_table_format: [
         (
             prop: (kind: Property(Artist),

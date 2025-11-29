@@ -1,8 +1,6 @@
 #!/bin/sh
 # River autostart
 
-env LANG=zh_CN.UTF-8
-
 # Wallpaers
 pgrep -f 'swww-daemon -f argb -l background -q' || riverctl spawn "swww-daemon -f argb -l background -q && swww img ${HOME}/Picture/nord/wild.png"
 

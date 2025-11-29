@@ -48,6 +48,11 @@ if [ "$tiler" == "filtile" ]; then
     riverctl map normal ${mod}+Alt Down send-layout-cmd filtile "main-location bottom"
     riverctl map normal ${mod}+Alt Left send-layout-cmd filtile "main-location left"
     riverctl map normal ${mod}+Alt Right send-layout-cmd filtile "main-location right"
+
+    riverctl map normal ${mod}+Control_L Left send-layout-cmd filtile "main-ratio +0.01"
+    riverctl map normal ${mod}+Control_L Right send-layout-cmd filtile "main-ratio -0.01"
+    
+    riverctl map normal ${mod}+Alt p send-layout-cmd filtile "pad"
 else
     riverctl map normal ${mod}+Alt Up send-layout-cmd rivertile "main-count +1"
     riverctl map normal ${mod}+Alt Down send-layout-cmd rivertile "main-count -1"

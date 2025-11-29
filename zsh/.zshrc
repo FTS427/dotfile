@@ -6,33 +6,31 @@ case $- in # check shell options
       *) return;; # don't do anything
 esac
 
-. ${HOME}/.zsh/path_env.zsh
-
-. ${ZFILE}/prompt.zsh
-. ${ZFILE}/hist.zsh
-. ${ZFILE}/alias.zsh
-. ${ZFILE}/key_bindings.zsh
-. ${ZFILE}/sk_key_bindings.zsh
-. ${ZFILE}/completion.zsh
-. ${HOME}/.scripts/color.sh
+. "${ZFILE}/prompt.zsh"
+. "${ZFILE}/hist.zsh"
+. "${ZFILE}/alias.zsh"
+. "${ZFILE}/key_bindings.zsh"
+. "${ZFILE}/sk_key_bindings.zsh"
+. "${ZFILE}/completion.zsh"
+. ~/.scripts/color.sh
 
 setopt beep
-zstyle :compinstall filename '${HOME}/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 # Plugins
-. ${ZPLUG_SYS}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. ${ZPLUG_SYS}/zsh-autosuggestions/zsh-autosuggestions.zsh
-. ${ZPLUG_SYS}/zsh-history-substring-search/zsh-history-substring-search.zsh
+. "${ZPLUG_SYS}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+. "${ZPLUG_SYS}/zsh-autosuggestions/zsh-autosuggestions.zsh"
+. "${ZPLUG_SYS}/zsh-history-substring-search/zsh-history-substring-search.zsh"
 
 # DE
 if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then 
-  ${HOME}/.scripts/choose_de.zsh
+  ~/.scripts/choose_de.zsh
 fi
 
 # Func
-. ${ZFUNC}/ccache.zsh
-. ${ZFUNC}/copypath.zsh
-. ${ZFUNC}/sk.zsh
+. "${ZFUNC}/ccache.zsh"
+. "${ZFUNC}/copypath.zsh"
+. "${ZFUNC}/sk.zsh"
 
 # Skim
 

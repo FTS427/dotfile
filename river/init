@@ -24,7 +24,6 @@ riverctl border-width 3
 
 # Window rules
 riverctl rule-add -app-id "*" ssd
-riverctl rule-add -app-id "QQ" float
 riverctl rule-add -app-id "WonderLab" float
 riverctl rule-add -app-id "Mindustry" fullscreen
 riverctl rule-add -app-id "electron" -title "Open Folder" float
