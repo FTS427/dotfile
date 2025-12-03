@@ -10,3 +10,4 @@ compinit -d ${HOME}/.cache/zsh/compdump
 
 # rustup
 . ${ZFUNC}/rustup.zsh
+

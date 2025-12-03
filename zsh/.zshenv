@@ -18,4 +18,4 @@ export SKIM_DEFAULT_OPTIONS="--color=fg:#${nord6},bg:#${nord0},matched:#${nord4}
       --height 20% \ 
       --ansi -i -c 'rg --color=always --line-number \"{}\"'"
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo'
-
+export BAT_THEME="Nord"
