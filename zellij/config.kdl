@@ -88,6 +88,7 @@ keybinds clear-defaults=true {
         bind "Alt n" { NewPane; }
         bind "Ctrl q" { Quit; }
         bind "Ctrl n" { NewTab; }
+        bind "Ctrl Alt c" { CloseFocus; }
     }
     shared_except "locked" "move" {
         bind "Ctrl m" { SwitchToMode "move"; }
